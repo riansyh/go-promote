@@ -18,4 +18,4 @@ GoPromote merupakan sebuah web yang berfungsi untuk menawarkan jasa promosi berb
 + Penjual yang memperlukan desain untuk usaha/produknya
 
 ## Skema Database
-(/Skema_database.png)
+(Skema_database.png)
