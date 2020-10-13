@@ -1,5 +1,9 @@
 @import "reset.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: quicksand;
     background-color: #EEEEEE;
@@ -76,12 +80,18 @@ a:hover{
 }
 
 .tombol{
+    display: inline-block;
     border: 0;
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #1089FE;
     color: #E5E5E5;
+    outline: none;
 } 
+
+.tombol a{
+    color: #eeee;
+}
 
 .login {
     background-color: #3BA0FF;
@@ -127,4 +137,48 @@ p {
 .in-footer p {
     font-weight: bold;
     padding: 20px;
+}
+
+/* REGISTER */
+.register-box {
+    padding: 40px 80px;
+    margin: 100px auto;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, .1);
+}
+
+.register-box h2{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 30px 30px 30px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #dfe6e9;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: #3BA0FF;
+    border: none;
+    color: #fed;
+    margin: 29px 116px 0 116px;
+    text-decoration: none;
+    width: 186px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+    background-color: #1089FE;
+    color: #fed;
+
 }
