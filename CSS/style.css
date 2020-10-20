@@ -593,3 +593,50 @@ body .rvw2 {
 .rvw h1 {
     font-weight: bold;
 }
+
+/* REGISTER */
+.register-box {
+    width: 60%;
+    text-align: center;
+    padding: 40px 80px;
+    margin: 250px auto 100px auto;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, .1);
+    background-color: white;
+}
+
+.register-box h3 {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 30px 30px 30px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #dfe6e9;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: #3BA0FF;
+    border: none;
+    color: #fed;
+    margin: 29px 116px 0 116px;
+    text-decoration: none;
+    width: 186px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+    background-color: #1089FE;
+    color: #fed;
+
+}

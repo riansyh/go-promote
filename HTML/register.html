@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/font.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="../CSS/style.css" media="all" rel="stylsheet" type="text/css" >
+	<script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
+	<link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2" as="font">
+	<link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh3x4X8mNhNy_r-Kw.woff2" as="font">
     <!-- END CSS -->
-    <title>Document</title>
+    <title>GoPromote</title>
 </head>
 <body>
     
-        <div class="header">
-                <span></span>
-                <div class="nav-left">
-                    <ul>
-                        <li>
-                            <a href="index.html" class="">Home</a>
-                        </li>
-                        <li>
-                            <a href="#paket" class="inti">Product</a>
-                        </li>
-                        <li>
-                            <a href="#testimoni" class="inti">Testimoni</a>
-                        </li>
-                        <!-- <li>
-                            <a href="loginadmin.html" class="inti">Admin</a>
-                        </li> -->
-                        <li>
-                            <a href="#" class="inti">Contact</a>
-                        </li>
-                        <li class="login">
-                            <a href="#" class="inti">Login</a>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-
-        
-        <!-- <li>
-            <div class="topdetil">
-                <a href="#" class="detil">Detail</a>
-            <i class="fas fa-chevron-down"></i>
-            <ul class="intinya">
-                <div><li><a href="sk.html">Syarat & ketentuan</a></li></div>
-                <div><li><a href="#">Biodata Pembuat</a></li></div>
-            </ul>
-        </div></li> -->
-
-
+		<header>
+			<a href="index.html" class="Logo"><img src="../IMAGE/logo.png" alt=""></a>
+				<ul class="satu">
+					<li>
+						<div class="home in">
+							<a href="index.html" class="inti">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="in">
+							<a href="#produk" class="inti">Product</a>
+						</div>
+					</li>
+					<li>
+						<div class="in">
+							<a href="#review" class="inti">Testimoni</a>
+						</div>
+					</li>
+					<li>						
+                        <div class="in">
+							<a href="#" class="inti">Admin</a>
+						</div>
+					</li>
+					<li>
+						<div class="in">
+							<a href="#bawah" class="inti">Contact</a>
+						</div>
+					</li>
+					<li>
+						<div class="topdetil">
+							<a href="#" class="detil">Detail</a>
+						<i class="fas fa-chevron-down"></i>
+						<ul class="intinya">
+							<div><li><a href="#">Syarat & ketentuan</a></li></div>
+							<div><li><a href="#">Biodata Pembuat</a></li></div>
+						</ul>
+					</div></li>
+				</ul>
+				<ul>
+                    <li><div class="loggin"><a href="#" class="login"></a></div></li>
+                    <!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
+                    <li><div class="loggin"><a href="#" class="login">Login</a></div></li>
+                    <li><div class="register"><a href="register.html" class="regis inti">Register</a></div></li>
+                </ul>
+			</div>
+        </header>
         <main>
       <div class="container">
-        <div class="register-box col-md-6 row justify-content-md-center">
-            <h2>Register</h2>
+        <div class="register-box">
+            <h3>Register</h3>
                 <form class="form" method="post" action="">
                     <label for="nama">Nama Toko/Online Shop</label>
                     <input type="text" name="nama" require autofocus autocomplete="off">
@@ -80,11 +91,44 @@
                 </form>        </div>     
     </div>
 
-        <footer class="footer">
-            <div class="in-footer">
-                <p>Copyright vdjcsin</p>     
-            </div>
-        </footer>        
+		<footer class="bawah"id="bawah">
+			<div class="container2">
+				<div class="foto"><a href="pembuat.php">
+					<p>Our Team</p>
+					<div class="fotori"><h3>Rian Febriansyah</h3></div>
+					<div class="fotorz"><h3>Rizal Herliansyah Hidayat</h3></div>
+					<div class="fotoid"><h3>Indra Kurniawan</h3></div>
+					</a>
+				</div>
+			</div>
+			<div class="container1">
+				<div class="middle">
+					<a class="btn"  href="#">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a class="btn" href="#">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a class="btn" href="#">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a class = "btn" href="#">
+						<i class="fab fa-google"></i>
+					</a>
+					<a class = "btn" href="#">
+						<i class="fab fa-line"></i>
+					</a>
+					<br>
+					<p>@ 2020 - All right reserved</p>
+				</div>
+			</div>
+		</footer>
+		<!-- Akhir Footer -->
+
+		<!-- Script -->
+		<script type="text/javascript" src="../JS/main.js"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
 </body>
 </html>
