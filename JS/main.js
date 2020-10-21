@@ -2,6 +2,11 @@ window.addEventListener("scroll", function(){
     var header = document.querySelector("header");
 	header.classList.toggle("sticky", window.scrollY > 0);
 });
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("div.kepala");
+	header.classList.toggle("bg_atas", window.scrollY > 0);
+});
 			
 window.addEventListener("scroll", function(){
     var h2 = document.querySelector("h2");
