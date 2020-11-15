@@ -61,10 +61,10 @@
 				</li>
 				<!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
 				<li>
-					<div class="loggin"><a href="login" class="login">Login</a></div>
+					<div class="loggin"><a href="#" class="login">Login</a></div>
 				</li>
 				<li>
-					<div class="register"><a href="#" class="regis inti">Register</a></div>
+					<div class="register"><a href="register.html" class="regis inti">Register</a></div>
 				</li>
 			</ul>
 	</div>
@@ -73,40 +73,20 @@
 	<main>
 		<div class="container">
 			<div class="register-box">
-				<h3>Register</h3>
-				<form class="form" method="post" action="register">
-					<!-- <label for="nama">Nama Toko/Online Shop</label>
-					<input type="text" name="nama" require autofocus autocomplete="off"> -->
-
+				<h3>Login</h3>
+				<form class="form" method="post" action="">
 					<label for="username">Username</label>
-					<input type="text" name="username" id="username" required autocomplete="off">
-
-					<!-- <label for="email">Email</label>
-					<input type="text" name="email" required autocomplete="off"> -->
-
-					<!-- <label for="no_hp">Nomor HP</label>
-					<input type="text" name="no_hp" required autocomplete="off">
-
-					<label for="instagram">Instagram</label>
-					<input type="text" name="instagram" required autocomplete="off"> -->
+					<input type="text" name="username" required autocomplete="off" value="<?=get_cookie('username')?>">
 
 					<label for="password">Password</label>
-					<input type="password" name="password" id="password" required autocomplete="off">
+					<input type="password" name="password" required autocomplete="off">
 
-					<label for="password_confirm">Konfirmasi Password</label>
-					<input type="password" name="password_confirm" id="password_confirm" required>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember Me!</label> <br>
 
-					<?php if(isset($validation)) : ?>
-                    	<div class="col-12">
-                            <div class="alert alert-danger" role="alert">
-                                <?= $validation->ListErrors() ?>
-                            </div>
-                        </div>
-					<?php endif; ?>
-							
-					<input type="submit" name="submit">
+                    <input type="submit" name="submit" value="Login">
 				</form>
-				<a href="/login">Already have account?</a>
+                <a href="/register">Don't Have Account?</a>
 			</div>
 		</div>
 

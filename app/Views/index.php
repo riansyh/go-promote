@@ -56,12 +56,9 @@
                 </li>
             </ul>
             <ul>
-                <li>
-                    <div class="loggin"><a href="#" class="login"></a></div>
-                </li>
                 <!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
                 <li>
-                    <div class="loggin"><a href="#" class="login">Login</a></div>
+                    <div class="loggin"><a href="login" class="login">Login</a></div>
                 </li>
                 <li>
                     <div class="register"><a href="register" class="regis inti">Register</a></div>

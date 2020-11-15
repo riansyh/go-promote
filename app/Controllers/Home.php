@@ -14,6 +14,4 @@ class Home extends BaseController
 
 		return view('register');
 	}
-	//--------------------------------------------------------------------
-
 }
