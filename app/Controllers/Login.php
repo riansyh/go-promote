@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\UserData;
+use App\Models\User_GoPromote;
 
 class Login extends BaseController
 {
@@ -31,22 +33,35 @@ class Login extends BaseController
                 $model = new UserModel();
 
                 $user = $model->where('username', $this->request->getVar('username'))
-                    ->first();
+                ->first();
 
                 $this->setUserSession($user);
 
+                $modeluser = new User_GoPromote();
+                $username = session()->get('username');
+                $data['user'] = $modeluser->getUser($username)->getRow();
+
                 //Cookie
                 $remember = $this->request->getVar('remember');
-                if($remember == 'on'){
+                if ($remember == 'on') {
                     $cookie = array(
                         'name' => 'username',
                         'value' => $this->request->getVar('username'),
                         'expire' => '36000',
                     );
-                    return redirect()->to('dashboard')
-                    ->setCookie($cookie);
-                } else {
-                    return redirect()->to('dashboard');
+                    if ($data['user']->nama === "") {
+                        return redirect()->to("edit/$username")
+                            ->setCookie($cookie);
+                    } else {
+                        return redirect()->to("dashboard")
+                        ->setCookie($cookie);
+                    }
+                   } else {
+                    if ($data['user']->nama === "") {
+                        return redirect()->to("edit/$username");
+                    } else {
+                        return redirect()->to("dashboard");
+                    }
                 }
             }
         }
@@ -83,13 +98,20 @@ class Login extends BaseController
                 $data['validation'] = $this->validator;
             } else {
                 $model = new UserModel();
+                $model2 = new UserData();
 
                 $newData = [
                     'username' => $this->request->getVar('username'),
                     'password' => $this->request->getVar('password'),
                 ];
 
+                $username = [
+                    'username' => $this->request->getVar('username'),
+                ];                
+
                 $model->save($newData);
+                $model2->save($username);
+
                 $session = session();
                 $session->setFlashdata('success', 'Successful Registration');
 

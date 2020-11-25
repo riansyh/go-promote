@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="nav">
+    <div class="nav"></div>
         <header>
             <a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
             <ul class="satu">
@@ -57,10 +57,10 @@
             </ul>
             <ul>
                 <li>
-                    <div class="in"><a href="dashboard" class="regis nav-item">Profile</a></div>
+                    <div class="in"><a href="dashboard" class="info nav-item">Profile</a></div>
                 </li>
                 <li>
-                    <div class="in"><a href="Login/logout" class="regis nav-item">Logout</a></div>
+                    <div class="in"><a href="Login/logout" class="warning nav-item">Logout</a></div>
                 </li>
             </ul>
     </div>
@@ -76,38 +76,38 @@
                             <table class="bio">
                                 <tbody>
                                     <tr>
-                                        <td>Nama Toko</td>
+                                        <td>Nama</td>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><?=  $user->nama ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Username</td>
                                     </tr>
                                     <tr>
                                         <td><?= session()->get('username'); ?></td>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
                                         <td>Email</td>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><?= $user->email ?></td>
                                     </tr>
                                     <tr>
                                         <td>Instagram</td>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><?=  $user->instagram ?></td>
                                     </tr>
                                     <tr>
                                         <td>Nomor HP</td>
                                     </tr>
                                     <tr>
-                                        <td></td>
+                                        <td><?=  $user->no_hp ?></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="go_promote/edit/<?= session()->get('username'); ?>">
+                            <a href="edit/<?= session()->get('username'); ?>">
                                 <h5>Edit</h5>
                             </a>
                         </li>
@@ -134,9 +134,6 @@
                                     <h5>Beli Paket</h5>
                                 </a>
                             </div>
-                            <div class="logout">
-                                <a href="Login/logout">
-                                    <h5>Logout</h5>
                         </li>
                     </ul>
                 </div>

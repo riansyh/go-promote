@@ -1,15 +1,15 @@
 /* Bagian bawah */
 
-.bottom {
-  height: 500px;
+footer {
   width: 100%;
   display: inline-block;
   position: relative;
   margin: auto;
+  bottom: 0;
+  left: 0;
 }
 
 .container2 {
-  height: 350px;
   width: 100%;
   background-color: #124985;
   position: relative;
@@ -17,128 +17,38 @@
   margin: 0;
 }
 
-.foto {
-  height: 300px;
-  width: 80%;
-  margin: 10px auto 40px;
-  position: relative;
-  transform: translateY(8%);
-  text-align: center;
-}
-
-.foto p {
-  font-size: 25px;
-  color: #f1f1f1f1;
-  font-weight: bold;
-  margin: 10px auto 25px;
-  padding-top: px;
-}
-
-.foto div {
-  display: inline-block;
-  height: 140px;
-  width: 140px;
-  margin: 20px 80px;
-  position: relative;
-  border-radius: 50%;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.foto div:hover {
-  border: 5px solid #4c6d7e;
-}
-
-.fotorz {
-  background-image: url(../img/frz.png);
-  background-size: 100px;
-  text-align: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background-size: cover;
-}
-
-.fotorz h3 {
-  font-size: 12px;
-  color: #f1f1f1f1;
-  position: absolute;
-  margin: auto;
-  bottom: -40%;
-}
-
-.fotoid {
-  background-image: url(../img/indra.jpeg);
-  background-size: 100px;
-  text-align: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background-size: 190px;
-  background-position-x: -20px;
-  background-position-y: -80px;
-  font-size: 0px;
-}
-
-.fotoid h3 {
-  font-size: 12px;
-  color: #f1f1f1f1;
-  position: absolute;
-  bottom: -30%;
-  left: 13%;
-}
-
-.fotori {
-  background-image: url(../img/rian.jpeg);
-  background-size: 100px;
-  text-align: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background-size: cover;
-  background-position-x: -20px;
-  font-size: 0px;
-}
-
-.fotori h3 {
-  font-size: 12px;
-  color: #f1f1f1f1;
-  position: absolute;
-  bottom: -30%;
-  left: 10%;
-}
-
 .container1 {
   padding: 0;
   margin: 0;
-  height: 150px;
+  height: 80px;
   width: 100%;
   background-color: #142940;
   position: relative;
 }
 
 .middle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
   width: 100%;
-  text-align: center;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
   display: inline-block;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 30%;
   position: relative;
   overflow: hidden;
   color: #bdc3c7;
-  margin: 0px;
+  margin: 0px 5px;
 }
 
 .btn i {
   position: relative;
-  line-height: 47px;
-  font-size: 18px;
+  line-height: 37px;
+  font-size: 16px;
   transition: 0.2s linear;
 }
 
@@ -182,5 +92,34 @@
 .middle p {
   color: #bdc3c7;
   font-size: 13px;
-  margin-top: 10px;
+}
+
+.kolom{
+  margin: 50px 0px;
+  color: white;
+  padding: 0px 40px;
+}
+
+.bot-h1{
+  margin: 15px 0px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.kolom p a, .kolom p, .kolom p i{
+  color: white;
+  font-size: 14px;
+}
+
+.kolom p i{
+  margin-right: 10px;
+}
+
+.kolom p{
+  margin: 15px 0px;
+}
+
+.social{
+  padding: 0px 10px;
 }

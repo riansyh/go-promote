@@ -9,13 +9,14 @@ html {
 }
 
 body {
-  min-height: 200vh;
+
   font-family: "Work sans", arial, sans-serif;
   background-color: white;
   margin: auto;
   position: relative;
   background-image: url(../img/dot-grid.png);
 }
+
 .bg {
   background-image: url(../img/dot-grid.png);
   background-size: 350px;
@@ -130,7 +131,7 @@ header ul li {
 }
 
 header .satu li a,
-.regis,
+.info, .warning,
 .login {
   font-size: 12.5px;
   font-family: "Work sans", arial, sans-serif;
@@ -152,8 +153,13 @@ header ul li a:hover {
   color: #000;
 }
 
-header ul li .regis {
-  color: rgb(0, 38, 255);
+.info, .sticky .info {
+  color: #0487df;
+  font-weight: bold;
+}
+
+.warning, .sticky .warning{
+  color: #dc3545;
   font-weight: bold;
 }
 
@@ -306,7 +312,7 @@ header .satu li .home::after {
   letter-spacing: 2px;
 }
 
-.jmbtrn .text .kata1 {
+.jmbtrn .text .intro-text-first {
   padding-top: 5px;
   padding-bottom: 27px;
   font-size: 45px;
@@ -361,7 +367,7 @@ header .satu li .home::after {
   width: 50px;
 }
 
-.jmbtrn .fotoppm {
+.jmbtrn .foto-ppm {
   height: 350px;
   width: 550px;
   position: absolute;
@@ -414,17 +420,17 @@ header .satu li .home::after {
 
 .text-awal {
   font-size: 20px;
-  line-height: 1.5em;
+  line-height: 35px;
 }
 
 .bold {
   font-weight: bold;
 }
 
-.psatu,
-.pdua,
-.ptiga,
-.pempat {
+.paket-satu,
+.paket-dua,
+.paket-tiga,
+.paket-empat {
   width: 240px;
   height: 300px;
   border-radius: 20px;
@@ -437,30 +443,30 @@ header .satu li .home::after {
   cursor: pointer;
 }
 
-.psatu {
+.paket-satu {
   background-image: url(../img/p1.png);
 }
 
-.pdua {
+.paket-dua {
   background-image: url(../img/p2.png);
 }
 
-.ptiga {
+.paket-tiga {
   background-image: url(../img/p3.png);
 }
 
-.pempat {
+.paket-empat {
   background-image: url(../img/p4.png);
 }
 
-.psatu h1,
-.pdua h1,
-.ptiga h1,
-.pempat h1 {
+.paket-satu h1,
+.paket-dua h1,
+.paket-tiga h1,
+.paket-empat h1 {
   color: white;
 }
 
-.product .namap {
+.product .nama-paket {
   margin-top: 20px;
   font-size: 40px;
   font-weight: bold;
@@ -476,10 +482,10 @@ header .satu li .home::after {
   margin: 10px;
 }
 
-.psatu:hover,
-.pdua:hover,
-.ptiga:hover,
-.pempat:hover {
+.paket-satu:hover,
+.paket-dua:hover,
+.paket-tiga:hover,
+.paket-empat:hover {
   transition: ease-in-out 200ms;
   transform: scale(1.02);
 }
@@ -578,8 +584,7 @@ body .rvw2 {
   background-image: url(../img/r3.jpeg);
 }
 
-.intro,
-.alasan {
+.intro-text{
   text-align: center;
   padding: 30px 70px 50px 70px;
   margin: 80px;
@@ -589,12 +594,16 @@ body .rvw2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.intro h1,
-.alasan h1 {
+.intro-text h1{
   font-size: 40px;
   margin: 10px;
   font-weight: bold;
-  color: #1089ff;
+  color: #0487df;
+}
+
+.intro-text p{
+  margin-top: 25px;
+  line-height: 30px;
 }
 
 .paket {
@@ -723,7 +732,7 @@ a:hover{
 }
 
 .jadwall thead tr {
-    background-color: #29c6b2;
+    background-color: #3b94ed;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -743,34 +752,21 @@ a:hover{
 }
 
 .jadwall tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #3b94ed;
 }
 
 .belilagi .bl{
     position: relative;
-    margin:0 auto;
-    left: 294px;
-    background-color: #29c6b2;
-    display: inline-block;
+    margin: 0 auto;
+    background-color: #3b94ed;
     padding: 10px 30px;
     border-radius: 30px;
-
+    width: 25%;
 }
 
 .belilagi h5{
     color: white;
     margin-top: 0;
-}
-
-.belilagi .logout {
-    position: relative;
-    margin: 0 auto;
-    left: 18%;
-    background-color: #29c6b2;
-    display: inline-block;
-    padding: 10px 43px;
-    top: 58px;
-    border-radius: 44px;
 }
 
 .sk{

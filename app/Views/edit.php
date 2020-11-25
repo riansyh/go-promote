@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css" media="all" rel="stylsheet" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" media="all" rel="stylsheet" type="text/css">
     <script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
     <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2" as="font">
@@ -18,13 +18,14 @@
 <body>
     <!-- Header -->
     <?php include 'navbar.php' ?>
+
     <!-- tampilan 1 -->
     <div class="register2">
         <div class="kotakk">
             <h4>Data Akun</h4>
             <ul class="data">
                 <li class="biodata">
-                    <form method="post" action="dashboard/update">
+                    <form method="post" action="/Dashboard/update">
                         <input type="hidden" name="username" value=<?= $user->username; ?>>
                         <table class="bio">
                             <tbody>
@@ -32,26 +33,26 @@
                                     <td>Nama</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="name" value=<?= $user->nama ?>></td>
+                                    <td><input type="text" name="name" required value=<?= $user->nama ?>></td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="email" value=<?= $user->email; ?>></td>
+                                    <td><input type="email" name="email" required value=<?= $user->email; ?>></td>
                                 </tr>
                                 <tr>
                                     <td>Instagram</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="instagram" value=<?= $user->instagram; ?>></td>
+                                    <td><input type="text" name="instagram" required value=<?= $user->instagram; ?>></td>
 
                                 </tr>
                                 <tr>
                                     <td>Nomor HP</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="text" name="nohp" value=<?= $user->no_hp; ?>></td>
+                                    <td><input type="number" name="nohp" required value=<?= $user->no_hp; ?>></td>
                                 </tr>
                                 <tr>
                                     <td><input type="submit" name="update" value="Update"></td>
