@@ -1,0 +1,47 @@
+.form-manual{
+    margin: 10px 0;
+}
+
+.form-manual input{
+    margin: 15px 0;
+}
+
+form {
+    margin: auto;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+
+}
+
+input[type=submit] {
+    background-color: #038ade;
+    border: none;
+    color: #fed;
+    margin: 23px;
+    text-decoration: none;
+    width: 186px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+    background-color: rgb(37, 77, 236);
+    color: #fed;
+}
+
+input:focus {
+  outline: none !important;
+  border:1px solid #038ade;
+  box-shadow: 0 0 7px #719ECE;
+  transition: 0.3s;
+}

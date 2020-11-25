@@ -31,15 +31,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->add('/', 'Home::index');
 $routes->add('register', 'Login::register');
 $routes->add('login', 'Login::login');
-$routes->post('dashboard', 'Dashboard::index');
+$routes->add('dashboard', 'Dashboard::index', ['filter' => 'auth']);
+$routes->add('bio', 'Login::bio');
 /**
- * --------------------------------------------------------------------
- * Additional Routing
- * --------------------------------------------------------------------
- *
  * There will often be times that you need additional routing and you
  * need it to be able to override any defaults in this file. Environment
  * based routes is one such time. require() additional route files here

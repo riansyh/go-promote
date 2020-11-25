@@ -16,33 +16,33 @@
 </head>
 
 <body>
-    <div class="kepala">
+    <div class="nav">
         <header>
             <a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
             <ul class="satu">
                 <li>
                     <div class="home in">
-                        <a href="/" class="inti">Home</a>
+                        <a href="/" class="nav-item">Home</a>
                     </div>
                 </li>
                 <li>
                     <div class="in">
-                        <a href="/#produk" class="inti">Product</a>
+                        <a href="/#produk" class="nav-item">Product</a>
                     </div>
                 </li>
                 <li>
                     <div class="in">
-                        <a href="/#review" class="inti">Testimoni</a>
+                        <a href="/#review" class="nav-item">Testimoni</a>
                     </div>
                 </li>
                 <li>
                     <div class="in">
-                        <a href="/#bawah" class="inti">Contact</a>
+                        <a href="/#bottom" class="nav-item">Contact</a>
                     </div>
                 </li>
                 <li>
-                    <div class="topdetil">
-                        <a href="#" class="detil">Detail</a>
+                    <div class="nav-item-detail">
+                        <a href="#" class="nav-detail">Detail</a>
                         <i class="fas fa-chevron-down"></i>
                         <ul class="intinya">
                             <div>
@@ -56,15 +56,11 @@
                 </li>
             </ul>
             <ul>
-                <li></li>
-                    <div class="loggin"><a href="#" class="login"></a></div>
-                </li>
-                <!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
                 <li>
-                    <div class="loggin"><a href="#" class="login">Login</a></div>
+                    <div class="in"><a href="dashboard" class="regis nav-item">Profile</a></div>
                 </li>
                 <li>
-                    <div class="register"><a href="register" class="regis inti">Register</a></div>
+                    <div class="in"><a href="Login/logout" class="regis nav-item">Logout</a></div>
                 </li>
             </ul>
     </div>
@@ -111,8 +107,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="edit.php">
-                                <h5>edit</h5>
+                            <a href="go_promote/edit/<?= session()->get('username'); ?>">
+                                <h5>Edit</h5>
                             </a>
                         </li>
                         <li class="bukti">
@@ -147,45 +143,8 @@
             </div>
         </div>
 
-        <footer class="bawah" id="bawah">
-            <div class="container2">
-                <div class="foto"><a href="pembuat.php">
-                        <p>Our Team</p>
-                        <div class="fotori">
-                            <h3>Rian Febriansyah</h3>
-                        </div>
-                        <div class="fotorz">
-                            <h3>Rizal Herliansyah Hidayat</h3>
-                        </div>
-                        <div class="fotoid">
-                            <h3>Indra Kurniawan</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="container1">
-                <div class="middle">
-                    <a class="btn" href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="btn" href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="btn" href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="btn" href="#">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a class="btn" href="#">
-                        <i class="fab fa-line"></i>
-                    </a>
-                    <br>
-                    <p>@ 2020 - All right reserved</p>
-                </div>
-            </div>
-        </footer>
-        <!-- Akhir Footer -->
+        <!-- Footer -->
+        <?php include 'footer.php' ?>
 
         <!-- Script -->
         <script type="text/javascript" src="../JS/main.js"></script>
@@ -193,4 +152,5 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

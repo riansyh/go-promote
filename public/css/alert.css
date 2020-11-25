@@ -1,0 +1,15 @@
+.manual-alert{
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.wrng{
+  background-color: #f8d7da;
+  color: #a35d63;
+}
+
+.succes{
+  background-color:#d5edda;
+  color: #759d7a;    
+}

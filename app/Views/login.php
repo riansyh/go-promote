@@ -16,80 +16,38 @@
 </head>
 
 <body>
-	<div class="kepala">
-		<header>
-			<a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
-			<ul class="satu">
-				<li>
-					<div class="home in">
-						<a href="/" class="inti">Home</a>
-					</div>
-				</li>
-				<li>
-					<div class="in">
-						<a href="/#produk" class="inti">Product</a>
-					</div>
-				</li>
-				<li>
-					<div class="in">
-						<a href="/#review" class="inti">Testimoni</a>
-					</div>
-				</li>
-				<li>
-					<div class="in">
-						<a href="/#bawah" class="inti">Contact</a>
-					</div>
-				</li>
-				<li>
-					<div class="topdetil">
-						<a href="#" class="detil">Detail</a>
-						<i class="fas fa-chevron-down"></i>
-						<ul class="intinya">
-							<div>
-								<li><a href="#">Syarat & ketentuan</a></li>
-							</div>
-							<div>
-								<li><a href="#">Biodata Pembuat</a></li>
-							</div>
-						</ul>
-					</div>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<div class="loggin"><a href="/login" class="login">Login</a></div>
-				</li>
-				<li>
-					<div class="register"><a href="register" class="regis inti">Register</a></div>
-				</li>
-			</ul>
-	</div>
-	</header>
-	</div>
+	<!-- Header -->
+	<?php include 'navbar.php' ?>
+
 	<main>
 		<div class="container">
 			<div class="register-box">
 				<h3>Login</h3>
 
 				<?php if (session()->get('success')) : ?>
-					<div class="" role="alert">
+					<div class="manual-alert succes" role="alert">
 						<?= session()->get('success') ?>
 					</div>
 				<?php endif; ?>
 
 				<form class="form" method="post" action="">
-					<label for="username">Username</label>
-					<input type="text" name="username" required autocomplete="off" value="<?= get_cookie('username') ?>">
+					<div class="form-manual">
+						<label for="username">Username</label>
+						<input type="text" name="username" required autocomplete="off" placeholder="username" value="<?= get_cookie('username') ?>">
+					</div>
 
-					<label for="password">Password</label>
-					<input type="password" name="password" required autocomplete="off">
-
-					<input type="checkbox" name="remember" id="remember">
-					<label for="remember">Remember Me!</label>
+					<div class="form-manual">
+						<label for="password">Password</label>
+						<input type="password" name="password" required autocomplete="off" placeholder="password">
+					</div>
+					<div class="remember">
+						<input type="checkbox" name="remember" id="remember" class="remember-me">
+						<label for="remember">Remember Me!</label>
+					</div>
 
 					<?php if (isset($validation)) : ?>
 						<div class="col-12">
-							<div class="">
+							<div class="manual-alert wrng">
 								<?= $validation->ListErrors() ?>
 							</div>
 						</div>
@@ -103,45 +61,8 @@
 			</div>
 		</div>
 
-		<footer class="bawah" id="bawah">
-			<div class="container2">
-				<div class="foto"><a href="pembuat.php">
-						<p>Our Team</p>
-						<div class="fotori">
-							<h3>Rian Febriansyah</h3>
-						</div>
-						<div class="fotorz">
-							<h3>Rizal Herliansyah Hidayat</h3>
-						</div>
-						<div class="fotoid">
-							<h3>Indra Kurniawan</h3>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="container1">
-				<div class="middle">
-					<a class="btn" href="#">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-google"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-line"></i>
-					</a>
-					<br>
-					<p>@ 2020 - All right reserved</p>
-				</div>
-			</div>
-		</footer>
-		<!-- Akhir Footer -->
+		<!-- Footer -->
+		<?php include 'footer.php' ?>
 
 		<!-- Script -->
 		<script type="text/javascript" src="../JS/main.js"></script>

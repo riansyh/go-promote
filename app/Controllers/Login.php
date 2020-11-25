@@ -10,6 +10,11 @@ class Login extends BaseController
     {
         $data = [];
         helper(['form', 'cookie']);
+
+        if(session()->get('isLoggedIn')){
+            return redirect()->to('dashboard');
+        }
+
         if ($this->request->getMethod() == 'post') {
             $rules = [
                 'username' => 'required|min_length[6]|max_length[50]',
@@ -63,6 +68,11 @@ class Login extends BaseController
 	{
         $data = [];
         helper(['form']);
+
+        if(session()->get('isLoggedIn')){
+            return redirect()->to('dashboard');
+        }
+
         if($this->request->getMethod() == 'post'){
             $rules = [
                 'username' => 'required|min_length[6]|max_length[50]|is_unique[users.username]',
@@ -92,8 +102,12 @@ class Login extends BaseController
     public function logout()
 	{
         session()->destroy();
-		return redirect()->to('/')->deleteCookie('username');
-	}
+        return redirect()->to('/')->deleteCookie('username');		
+    }
+    
+    public function bio(){
+        return view('bio_pembuat');
+    }
 
 	//--------------------------------------------------------------------
 

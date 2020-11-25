@@ -16,123 +16,42 @@
 </head>
 
 <body>
-	<div class="kepala">
-		<header>
-			<a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
-			<ul class="satu">
-				<li>
-					<div class="home in">
-						<a href="/" class="inti">Home</a>
-					</div>
-				</li>
-				<li>
-					<div class="in">
-						<a href="/#produk" class="inti">Product</a>
-					</div>
-				</li>
-				<li>
-					<div class="in">
-						<a href="/#review" class="inti">Testimoni</a>
-					</div>
-				</li>
-				<li>
-					<div class="in">
-						<a href="/#bawah" class="inti">Contact</a>
-					</div>
-				</li>
-				<li>
-					<div class="topdetil">
-						<a href="#" class="detil">Detail</a>
-						<i class="fas fa-chevron-down"></i>
-						<ul class="intinya">
-							<div>
-								<li><a href="#">Syarat & ketentuan</a></li>
-							</div>
-							<div>
-								<li><a href="#">Biodata Pembuat</a></li>
-							</div>
-						</ul>
-					</div>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<div class="loggin"><a href="login" class="login">Login</a></div>
-				</li>
-				<li>
-					<div class="register"><a href="#" class="regis inti">Register</a></div>
-				</li>
-			</ul>
-	</div>
-	</header>
-	</div>
+	<!-- Header -->
+	<?php include 'navbar.php' ?>
+	
 	<main>
 		<div class="container">
 			<div class="register-box">
 				<h3>Register</h3>
 				<form class="form" method="post" action="register">
-					<label for="username">Username</label>
-					<input type="text" name="username" id="username" required autocomplete="off">
-
-					<label for="password">Password</label>
-					<input type="password" name="password" id="password" required autocomplete="off">
-
-					<label for="password_confirm">Konfirmasi Password</label>
-					<input type="password" name="password_confirm" id="password_confirm" required>
-
-					<?php if(isset($validation)) : ?>
-                    	<div class="col-12">
-                            <div class="alert alert-danger" role="alert">
-                                <?= $validation->ListErrors() ?>
-                            </div>
-                        </div>
+					<div class="form-manual">
+						<label for="username">Username</label>
+						<input type="text" name="username" id="username" placeholder="username" required autocomplete="off">
+					</div>
+					<div class="form-manual">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" placeholder="password" required autocomplete="off">
+					</div>
+					<div class="form-manual">
+						<label for="password_confirm">Konfirmasi Password</label>
+						<input type="password" name="password_confirm" placeholder="password" id="password_confirm" required>
+					</div>
+					<?php if (isset($validation)) : ?>
+						<div class="col-12">
+							<div class="manual-alert wrng" role="alert">
+								<?= $validation->ListErrors() ?>
+							</div>
+						</div>
 					<?php endif; ?>
-							
+
 					<input type="submit" name="submit">
 				</form>
 				<a href="/login">Already have account?</a>
 			</div>
 		</div>
 
-		<footer class="bawah" id="bawah">
-			<div class="container2">
-				<div class="foto"><a href="pembuat.php">
-						<p>Our Team</p>
-						<div class="fotori">
-							<h3>Rian Febriansyah</h3>
-						</div>
-						<div class="fotorz">
-							<h3>Rizal Herliansyah Hidayat</h3>
-						</div>
-						<div class="fotoid">
-							<h3>Indra Kurniawan</h3>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="container1">
-				<div class="middle">
-					<a class="btn" href="#">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-google"></i>
-					</a>
-					<a class="btn" href="#">
-						<i class="fab fa-line"></i>
-					</a>
-					<br>
-					<p>@ 2020 - All right reserved</p>
-				</div>
-			</div>
-		</footer>
-		<!-- Akhir Footer -->
+		<!-- Footer -->
+		<?php include 'footer.php' ?>
 
 		<!-- Script -->
 		<script type="text/javascript" src="../JS/main.js"></script>

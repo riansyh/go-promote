@@ -4,7 +4,7 @@ window.addEventListener("scroll", function(){
 });
 
 window.addEventListener("scroll", function(){
-    var header = document.querySelector("div.kepala");
+    var header = document.querySelector("div.nav");
 	header.classList.toggle("bg_atas", window.scrollY > 0);
 });
 			
