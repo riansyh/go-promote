@@ -57,14 +57,10 @@
 			</ul>
 			<ul>
 				<li>
-					<div class="loggin"><a href="#" class="login"></a></div>
-				</li>
-				<!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
-				<li>
-					<div class="loggin"><a href="#" class="login">Login</a></div>
+					<div class="loggin"><a href="/login" class="login">Login</a></div>
 				</li>
 				<li>
-					<div class="register"><a href="register.html" class="regis inti">Register</a></div>
+					<div class="register"><a href="register" class="regis inti">Register</a></div>
 				</li>
 			</ul>
 	</div>
@@ -74,19 +70,36 @@
 		<div class="container">
 			<div class="register-box">
 				<h3>Login</h3>
+
+				<?php if (session()->get('success')) : ?>
+					<div class="" role="alert">
+						<?= session()->get('success') ?>
+					</div>
+				<?php endif; ?>
+
 				<form class="form" method="post" action="">
 					<label for="username">Username</label>
-					<input type="text" name="username" required autocomplete="off" value="<?=get_cookie('username')?>">
+					<input type="text" name="username" required autocomplete="off" value="<?= get_cookie('username') ?>">
 
 					<label for="password">Password</label>
 					<input type="password" name="password" required autocomplete="off">
 
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Remember Me!</label> <br>
+					<input type="checkbox" name="remember" id="remember">
+					<label for="remember">Remember Me!</label>
 
-                    <input type="submit" name="submit" value="Login">
+					<?php if (isset($validation)) : ?>
+						<div class="col-12">
+							<div class="">
+								<?= $validation->ListErrors() ?>
+							</div>
+						</div>
+					<?php endif; ?>
+
+					<input type="submit" name="submit" value="Login">
 				</form>
-                <a href="/register">Don't Have Account?</a>
+				<div class="dont-have">
+					<a href="/register">Don't Have Account?</a>
+				</div>
 			</div>
 		</div>
 

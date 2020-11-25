@@ -56,7 +56,6 @@
                 </li>
             </ul>
             <ul>
-                <!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
                 <li>
                     <div class="loggin"><a href="login" class="login">Login</a></div>
                 </li>
@@ -134,11 +133,7 @@
                             <li>5x Instastory</li>
                         </ul>
                 </div>
-
-                <div class="tPaket">
-                    <h1>Beli</h1>
-                    </a>
-                </div>
+                
                 <div class="pattern"></div>
             </div>
 

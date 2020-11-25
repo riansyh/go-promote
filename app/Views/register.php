@@ -57,10 +57,6 @@
 			</ul>
 			<ul>
 				<li>
-					<div class="loggin"><a href="#" class="login"></a></div>
-				</li>
-				<!-- <li><div class="register"><a href="#" class="regis inti">Logout</a></div></li> -->
-				<li>
 					<div class="loggin"><a href="login" class="login">Login</a></div>
 				</li>
 				<li>
@@ -75,20 +71,8 @@
 			<div class="register-box">
 				<h3>Register</h3>
 				<form class="form" method="post" action="register">
-					<!-- <label for="nama">Nama Toko/Online Shop</label>
-					<input type="text" name="nama" require autofocus autocomplete="off"> -->
-
 					<label for="username">Username</label>
 					<input type="text" name="username" id="username" required autocomplete="off">
-
-					<!-- <label for="email">Email</label>
-					<input type="text" name="email" required autocomplete="off"> -->
-
-					<!-- <label for="no_hp">Nomor HP</label>
-					<input type="text" name="no_hp" required autocomplete="off">
-
-					<label for="instagram">Instagram</label>
-					<input type="text" name="instagram" required autocomplete="off"> -->
 
 					<label for="password">Password</label>
 					<input type="password" name="password" id="password" required autocomplete="off">

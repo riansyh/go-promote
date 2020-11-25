@@ -83,7 +83,7 @@ class Login extends BaseController
                 $session = session();
                 $session->setFlashdata('success', 'Successful Registration');
 
-                return redirect()->to('/');
+                return redirect()->to('/login');
             }
         }
         return view('register', $data);
@@ -92,7 +92,7 @@ class Login extends BaseController
     public function logout()
 	{
         session()->destroy();
-		return redirect()->to('/');
+		return redirect()->to('/')->deleteCookie('username');
 	}
 
 	//--------------------------------------------------------------------

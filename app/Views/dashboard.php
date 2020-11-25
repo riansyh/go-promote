@@ -64,7 +64,7 @@
                     <div class="loggin"><a href="#" class="login">Login</a></div>
                 </li>
                 <li>
-                    <div class="register"><a href="register.html" class="regis inti">Register</a></div>
+                    <div class="register"><a href="register" class="regis inti">Register</a></div>
                 </li>
             </ul>
     </div>
