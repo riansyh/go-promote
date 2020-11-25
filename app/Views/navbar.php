@@ -43,14 +43,14 @@
                     <div class="loggin"><a href="/login" class="login">Login</a></div>
                 </li>
                 <li>
-                    <div class="register"><a href="register" class="info nav-item">Register</a></div>
+                    <div class="register"><a href="/register" class="info nav-item">Register</a></div>
                 </li>
             <?php else : ?>
                 <li>
                     <div class="in"><a href="/dashboard" class="info nav-item">Dashboard</a></div>
                 </li>
                 <li>
-                    <div class="in"><a href="Login/logout" class="warning nav-item">Logout</a></div>
+                    <div class="in"><a href="/Login/logout" class="warning nav-item">Logout</a></div>
                 </li>
             <?php endif; ?>
         </ul>
