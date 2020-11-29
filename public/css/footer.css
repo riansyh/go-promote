@@ -97,7 +97,10 @@ footer {
 .kolom{
   margin: 20px 0px;
   color: white;
-  border: 1px solid red;
+}
+
+footer .col-md-4{
+  padding-left: 60px;
 }
 
 .bot-h1{

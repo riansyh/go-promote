@@ -25,7 +25,9 @@
             <div class="cube-group row bg-white">
                 <div class="col-md-1"></div>
                 <div class="col-md-4 d-flex justify-content-center">
-                    <div class="foto-profile "></div>
+                    <div class="foto-profile" id="foto-profile">
+                   
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <ul class="data">
@@ -80,7 +82,10 @@
     <!-- Footer -->
     <?php include 'footer.php' ?>
 
+    <?php $nama = "rian.jpeg"; ?>
+
     <!-- Script -->
+    <script>document.getElementById("foto-profile").style.backgroundImage = "url('../img/<?=$nama;?>')";</script>
     <script type="text/javascript" src="../JS/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

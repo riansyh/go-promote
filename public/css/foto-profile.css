@@ -1,7 +1,10 @@
 .foto-profile{
     width: 200px;
     height: 200px;
-    background-color: red;
+    background-size: cover;
+    border: 2px solid black;
+    box-shadow: ;
     border-radius: 100%;
     margin-top: 20px;
+
 }
