@@ -1,78 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Go Promote</title>
-	<script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../CSS/nvbar2.css">
-	<link rel="stylesheet" href="../CSS/sk.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
-	<link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2" as="font">
-	<link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh3x4X8mNhNy_r-Kw.woff2" as="font">
-	<link rel="stylesheet" href="../CSS/font.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" media="all" rel="stylsheet" type="text/css">
+    <script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
+    <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2" as="font">
+    <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh3x4X8mNhNy_r-Kw.woff2" as="font">
+    <!-- END CSS -->
+    <title>GoPromote</title>
 </head>
 
 <body>
-	<h2>
-		<div class="kotak"></div>
-	</h2>
-	<header>
-		<a href="index.php" class="Logo"><img src="../IMAGE/logo.png" alt=""></a>
-		<ul class="satu">
-			<li>
-				<div class="home in"><a href="index.php" class="inti">Home</a></div>
-			</li>
-			<li>
-				<div class="in"><a href="index.php#produk" class="inti">Product</a></div>
-			</li>
-			<li>
-				<div class="in"><a href="index.php#review" class="inti">Testimoni</a></div>
-			</li>
-			<li>
-				<?php if ($cek == false) : ?>
-					<div class="in">
-						<a href="loginadmin.php" class="inti">Admin</a>
-					</div>
-				<?php endif; ?>
-			</li>
-			<li>
-				<div class="in"><a href="#bawah" class="inti">Contact</a></div>
-			</li>
-			<li>
-				<div class="topdetil"><a href="#" class="detil">Detail</a>
-					<i class="fas fa-chevron-down"></i>
-					<ul class="intinya">
-						<div>
-							<li><a href="sk.php">Syarat & ketentuan</a></li>
-						</div>
-						<div>
-							<li><a href="pembuat.php">Biodata Pembuat</a></li>
-						</div>
-					</ul>
-				</div>
-			</li>
-		</ul>
-		<ul>
-			<?php if ($cek == true) : ?>
-				<li>
-					<div class="loggin"><a href="profil.php" class="login"><?= $_SESSION["username"] ?></a></div>
-				</li>
-				<li>
-					<div class="register"><a href="logout.php" class="regis inti">Logout</a></div>
-				</li>
-			<?php else : ?>
-				<li>
-					<div class="loggin"><a href="login.php" class="login">Login</a></div>
-				</li>
-				<li>
-					<div class="register"><a href="register.php" class="regis inti">Register</a></div>
-				</li>
-			<?php endif; ?>
-		</ul>
-		</div>
-	</header>
+	 <!-- Header -->
+	 <?php include 'navbar.php' ?>
+
 	<div class="sk">
 		<br><br><br>
 		<h1> Ketentuan Paid Promote Manager </h1><br>
@@ -133,52 +79,13 @@
 		</ol>
 	</div>
 	<!-- Footer -->
-	<footer class="bawah" id="bawah">
-		<div class="container2">
-			<div class="foto"><a href="pembuat.php">
-					<p>Our Team</p>
-					<div class="fotori">
-						<h3>Rian Febriansyah</h3>
-					</div>
-					<div class="fotorz">
-						<h3>Rizal Herliansyah Hidayat</h3>
-					</div>
-					<div class="fotoid">
-						<h3>Indra Kurniawan</h3>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="container">
-			<div class="middle">
-				<a class="btn" href="#">
-					<i class="fab fa-facebook-f"></i>
-				</a>
-				<a class="btn" href="#">
-					<i class="fab fa-twitter"></i>
-				</a>
-				<a class="btn" href="#">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a class="btn" href="#">
-					<i class="fab fa-google"></i>
-				</a>
-				<a class="btn" href="#">
-					<i class="fab fa-line"></i>
-				</a>
-				<br>
-				<p>@ 2020 - All right reserved</p>
-			</div>
-		</div>
-
-	</footer>
+	<?php include 'footer.php' ?>
 	<!-- Akhir Footer -->
 
 	<!-- Script -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../JS/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -3,6 +3,7 @@
 @import "font.css";
 @import "alert.css";
 @import "form.css";
+@import "foto-profile.css";
 
 html {
   scroll-behavior: smooth;
@@ -634,7 +635,6 @@ body .rvw2 {
 
 .register2 {
     z-index: 100;
-    height: 1400px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -642,32 +642,26 @@ body .rvw2 {
     top: 0;
     flex-wrap: wrap;
     justify-content: center;
-    transform: translateY();
     overflow: hidden;
-    background-image: url(../IMAGE/bglogin.jpeg);
 }
 
-.kotakk {
+.col-md-4 {
+  padding: 40px 0px;
+}
+
+.cube-group {
     position: relative;
     margin-top: 130px;
-    min-width: 700px;
-    min-height: 400px;
+    width: 800px;
     margin-bottom: 44px;
 }
 
-.kotakk h4 {
-    margin-top: 50px;
-    text-align: center;
+.cube-group h4 {
+    margin-top: 40px;
+    text-align: left;
     font-size: 25px;
     font-weight: bold;
 }
-
-.kotakk h5 {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 20px;
-}
-
 
 .ff {
     margin: 52px auto;
@@ -679,15 +673,14 @@ body .rvw2 {
 .bukti table{
     margin: 40px auto;
 }
+
 .biodata table{
-    margin: 20px auto;
+    margin: 20px;
 }
 
 .bio{
     position: relative;
-
-    margin: auto;
-    text-align: center;
+    text-align: left;
     font-size: 17px;
 }
 
@@ -696,20 +689,8 @@ body .rvw2 {
 }
 
 .bio tbody tr:nth-of-type(odd){
-    border-bottom: 2px solid rgba(0, 152, 121, 0.3);    
     font-size: 20px;
     font-weight: bold;    
-}
-
-.biodata h5{
-    margin-bottom:30px;
-    opacity: 0.8;
-}
-
-.bukti h5{
-    margin-top:26px;
-    font-weight: bolder;
-    margin-bottom: -10px;
 }
 
 a:hover{

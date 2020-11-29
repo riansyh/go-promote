@@ -40,17 +40,16 @@ if (isset($_POST["beli"])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Paid Promote Manager</title>
-    <script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/navbr.css">
-    <link rel="stylesheet" href="../CSS/payment.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="css/style.css" media="all" rel="stylsheet" type="text/css">
+    <script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
     <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2" as="font">
     <link rel="preload" href="https://fonts.gstatic.com/s/worksans/v5/QGYpz_wNahGAdqQ43Rh3x4X8mNhNy_r-Kw.woff2" as="font">
-    <link rel="stylesheet" href="../CSS/font.css">
+    <!-- END CSS -->
+    <title>GoPromote</title>
 </head>
 
 <body>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" media="all" rel="stylsheet" type="text/css">
     <script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
@@ -57,7 +57,7 @@
             </ul>
             <ul>
                 <li>
-                    <div class="in"><a href="dashboard" class="info nav-item">Profile</a></div>
+                    <div class="in"><a href="profile" class="info nav-item">Profile</a></div>
                 </li>
                 <li>
                     <div class="in"><a href="Login/logout" class="warning nav-item">Logout</a></div>
@@ -69,48 +69,7 @@
     <main>
         <div class="container">
             <div class="register2">
-                <div class="kotakk">
-                    <h4>Data Akun</h4>
-                    <ul class="data">
-                        <li class="biodata">
-                            <table class="bio">
-                                <tbody>
-                                    <tr>
-                                        <td>Nama</td>
-                                    </tr>
-                                    <tr>
-                                        <td><?=  $user->nama ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Username</td>
-                                    </tr>
-                                    <tr>
-                                        <td><?= session()->get('username'); ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                    </tr>
-                                    <tr>
-                                        <td><?= $user->email ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Instagram</td>
-                                    </tr>
-                                    <tr>
-                                        <td><?=  $user->instagram ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nomor HP</td>
-                                    </tr>
-                                    <tr>
-                                        <td><?=  $user->no_hp ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="edit/<?= session()->get('username'); ?>">
-                                <h5>Edit</h5>
-                            </a>
-                        </li>
+                <div class="cube-group">
                         <li class="bukti">
                             <h5>Riwayat Pembelian</h5>
                             <table class="jadwall">

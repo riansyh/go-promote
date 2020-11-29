@@ -2,7 +2,7 @@
     margin: 10px 0;
 }
 
-.form-manual input{
+.form-manual input, .input{
     margin: 15px 0;
 }
 
@@ -11,7 +11,7 @@ form {
 }
 
 input,
-select {
+select, .input{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -22,7 +22,7 @@ select {
 
 }
 
-input[type=submit] {
+input[type=submit], .input {
     background-color: #038ade;
     border: none;
     color: #fed;
@@ -32,14 +32,14 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, .input:hover {
     transform: scale(1.01);
     transition: 0.2s;
     background-color: rgb(37, 77, 236);
     color: #fed;
 }
 
-input:focus {
+input:focus .input:focus{
   outline: none !important;
   border:1px solid #038ade;
   box-shadow: 0 0 7px #719ECE;

@@ -31,6 +31,14 @@ class Dashboard extends BaseController
         }
     }
 
+    public function profile()
+    {
+        $username = session()->get('username');
+            $model = new User_GoPromote();
+            $data['user'] = $model->getUser($username)->getRow();
+            echo view('profile', $data);
+    }
+
     public function update()
     {
         $model = new User_GoPromote();

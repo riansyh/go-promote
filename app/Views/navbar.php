@@ -28,7 +28,7 @@
                     <i class="fas fa-chevron-down"></i>
                     <ul class="intinya">
                         <div>
-                            <li><a href="#">Syarat & ketentuan</a></li>
+                            <li><a href="#sk">Syarat & ketentuan</a></li>
                         </div>
                         <div>
                             <li><a href="#">Biodata Pembuat</a></li>
