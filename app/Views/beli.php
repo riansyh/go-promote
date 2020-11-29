@@ -25,7 +25,7 @@
             <h4>Beli Paket</h4>
             <ul class="data">
                 <li class="biodata">
-                    <form method="post" action="/Dashboard/beli">
+                    <form method="post" action="/Transaksi/beli" enctype="multipart/form-data">
                         <table class="bio">
                             <tbody>
                                 <tr>
@@ -45,16 +45,16 @@
                                     <td>Jasa Desain</td>
                                 </tr>
                                 <tr>
-                                    <td> <select name="paket" id="paket" required>
-                                            <option value="false">Tidak</option>
-                                            <option value="true">Ya</option>
+                                    <td> <select name="desain" id="desain" required>
+                                            <option value="0">Tidak</option>
+                                            <option value="1">Ya</option>
                                         </select></td>
                                 </tr>
                                 <tr>
                                     <td>Konten</td>
                                 </tr>
                                 <tr>
-                                    <td> <input type="file" name="kontem" required> </td>
+                                    <td> <input type="file" name="konten" required> </td>
 
                                 </tr>
                                 <tr>
@@ -62,6 +62,14 @@
                                 </tr>
                                 <tr>
                                     <td><textarea name="caption" id="" cols="30" rows="10"></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tanggal Promosi</td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="date" name="tgl_pp" required></td>
                                 </tr>
                                 <tr>
                                     <td>Metode Pembayaran</td>

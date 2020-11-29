@@ -38,6 +38,7 @@ $routes->add('dashboard', 'Transaksi::index', ['filter' => 'auth']);
 $routes->add('bio', 'Login::bio');
 $routes->add('edit/(:alphanum)', 'Dashboard::edit/$1');
 $routes->add('profile', 'Dashboard::profile');
+$routes->add('beli', 'Dashboard::beliPage');
 /**
  * There will often be times that you need additional routing and you
  * need it to be able to override any defaults in this file. Environment

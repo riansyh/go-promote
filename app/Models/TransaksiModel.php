@@ -6,7 +6,8 @@ use CodeIgniter\Model;
 
 class TransaksiModel extends Model
 {
-    protected $table = 'jadwalpp';
+    protected $table = 'transaksi';
+    protected $allowedFields = ['username', 'id_transaksi', 'tgl_transaksi', 'metode','id_paket','tgl_pp','caption','foto','status','jasa_desain'];
 
     public function getTransaksi($id = false)
     {

@@ -71,7 +71,7 @@
             <div class="register2">
                 <div class="cube-group">
                     <li class="bukti">
-                        <h5>Riwayat Pembelian</h5>
+                        <h5 class="riwayat-pembelian">Riwayat Pembelian</h5>
                         <table class="jadwall">
                             <thead>
                                 <tr>
@@ -100,7 +100,7 @@
                     </li>
                     <li class="belilagi">
                         <div class="bl">
-                            <a href="beliPaket">
+                            <a href="beli">
                                 <h5>Beli Paket</h5>
                             </a>
                         </div>

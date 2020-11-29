@@ -790,3 +790,13 @@ i{
 .remember {
   width: 100%;
 }
+
+li {
+  list-style-type: none;
+}
+
+.riwayat-pembelian {
+  font-size: 30px;
+  text-align: center;
+  margin: 50px;
+}

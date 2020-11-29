@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Models\TransaksiModel;
 use App\Models\JadwalModel;
+use App\Models\TransaksiModel;
+use CodeIgniter\I18n\Time;
 
 class Transaksi extends BaseController
 {
@@ -30,21 +31,54 @@ class Transaksi extends BaseController
         helper(['form']);
         $username = session()->get('username');
 
-        $model = new TransaksiModel();
+        $namaFile = $_FILES["konten"]["name"];
+        $sizeFile = $_FILES["konten"]["size"];
+        $error = $_FILES["konten"]["error"];
+        $tmpName = $_FILES["konten"]["tmp_name"];
 
+        if ($error === 4) {
+            echo "tidak ada foto yang diupload";
+        }
+
+        $extensiFileAllowed = ["jpg", "jpeg", "png"];
+        $extensiFile = explode('.', $namaFile);
+        $extensiFile = strtolower(end($extensiFile));
+        if (!in_array($extensiFile, $extensiFileAllowed)) {
+            echo "hei salah masukkan type data";
+        }
+
+        if ($sizeFile > 2000000) {
+            echo "kegedean boi";
+        }
+
+        $namaFileBaru = uniqid();
+        $namaFileBaru .= '.' . $extensiFile;
+        echo $namaFileBaru;
+
+        $session = session()->get('username');
+
+        $dir = "konten/$session";
+        if (!is_dir($dir)) {
+            mkdir("konten/" . session()->get('username'));
+        }
+        move_uploaded_file($tmpName, 'konten/' . session()->get('username') . '/' . $namaFileBaru);
+
+        $model = new TransaksiModel();
+        $tgltransaksi = new Time('now');
         $newData = [
-            'metode' => '',
-            'tgl_transaksi' => '',
-            'id_paket' => '',
-            'tgl_pp' => '',
-            'username' => "$username",
-            'caption' => '',
-            'foto' => '',
-            'status' => '',
+            'metode' => $this->request->getVar('metode'),
+            'tgl_transaksi' => $tgltransaksi,
+            'id_paket' => $this->request->getVar('paket'),
+            'tgl_pp' => $this->request->getVar('tgl_pp'),
+            'username' => $username,
+            'caption' => $this->request->getVar('caption'),
+            'foto' => $namaFileBaru,
+            'status' => 'Proses',
+            'jasa_desain' => $this->request->getVar('desain'),
         ];
 
         $model->save($newData);
 
-        return view('/dashboard');
+        return redirect()->to('/dashboard');
     }
 }

@@ -40,24 +40,30 @@ class Dashboard extends BaseController
     }
 
     public function foto(){
+        $session = session();
         $namaFile = $_FILES["foto-profile"]["name"];
         $sizeFile = $_FILES["foto-profile"]["size"];
         $error = $_FILES["foto-profile"]["error"];
         $tmpName = $_FILES["foto-profile"]["tmp_name"];
 
-        if($error === 4){
-            echo "tidak ada foto yang diupload";
-        }
-
         $extensiFileAllowed = ["jpg", "jpeg", "png"];
         $extensiFile = explode('.', $namaFile);
         $extensiFile = strtolower(end($extensiFile));
-        if(!in_array($extensiFile, $extensiFileAllowed)){
-            echo "hei salah masukkan type data";
-        }
-
-        if($sizeFile > 2000000){
-            echo "kegedean boi";
+        
+        if($error === 4){
+            $session->setFlashdata('error', 'Tidak ada foto yang diupload!');
+            return redirect()->to('/profile');
+        }else{
+            if(!in_array($extensiFile, $extensiFileAllowed)){            
+                $session->setFlashdata('error', 'Extensi File Salah!');
+                return redirect()->to('/profile');
+            }
+            else{
+                if($sizeFile > 2000000){
+                    $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
+                    return redirect()->to('/profile');
+                }
+            }
         }
 
         $namaFileBaru = uniqid();
