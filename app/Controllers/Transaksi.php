@@ -3,17 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\TransaksiModel;
+use App\Models\JadwalModel;
 
-class Dashboard extends BaseController
+class Transaksi extends BaseController
 {
 
     public function index()
     {
-        $model = new TransaksiModel();
-        
-        $data['user'] = $model->getTransaksi()->getRow();
+        $model = new JadwalModel();
+        $data['transaksi'] = $model->getJadwal();
         return view('dashboard', $data);
-        
     }
 
     public function update($id)
@@ -43,9 +42,9 @@ class Dashboard extends BaseController
             'foto' => '',
             'status' => '',
         ];
-        
+
         $model->save($newData);
-        
+
         return view('/dashboard');
-    }    
+    }
 }

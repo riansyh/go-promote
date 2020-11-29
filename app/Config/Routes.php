@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 $routes->add('/', 'Home::index');
 $routes->add('register', 'Login::register');
 $routes->add('login', 'Login::login');
-$routes->add('dashboard', 'Dashboard::index', ['filter' => 'auth']);
+$routes->add('dashboard', 'Transaksi::index', ['filter' => 'auth']);
 $routes->add('bio', 'Login::bio');
 $routes->add('edit/(:alphanum)', 'Dashboard::edit/$1');
 $routes->add('profile', 'Dashboard::profile');

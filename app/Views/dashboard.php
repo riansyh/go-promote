@@ -17,83 +17,94 @@
 
 <body>
     <div class="nav"></div>
-        <header>
-            <a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
-            <ul class="satu">
-                <li>
-                    <div class="home in">
-                        <a href="/" class="nav-item">Home</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="in">
-                        <a href="/#produk" class="nav-item">Product</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="in">
-                        <a href="/#review" class="nav-item">Testimoni</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="in">
-                        <a href="/#bottom" class="nav-item">Contact</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="nav-item-detail">
-                        <a href="#" class="nav-detail">Detail</a>
-                        <i class="fas fa-chevron-down"></i>
-                        <ul class="intinya">
-                            <div>
-                                <li><a href="#">Syarat & ketentuan</a></li>
-                            </div>
-                            <div>
-                                <li><a href="#">Biodata Pembuat</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <div class="in"><a href="profile" class="info nav-item">Profile</a></div>
-                </li>
-                <li>
-                    <div class="in"><a href="Login/logout" class="warning nav-item">Logout</a></div>
-                </li>
-            </ul>
-    </div>
+    <header>
+        <a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
+        <ul class="satu">
+            <li>
+                <div class="home in">
+                    <a href="/" class="nav-item">Home</a>
+                </div>
+            </li>
+            <li>
+                <div class="in">
+                    <a href="/#produk" class="nav-item">Product</a>
+                </div>
+            </li>
+            <li>
+                <div class="in">
+                    <a href="/#review" class="nav-item">Testimoni</a>
+                </div>
+            </li>
+            <li>
+                <div class="in">
+                    <a href="/#bottom" class="nav-item">Contact</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item-detail">
+                    <a href="#" class="nav-detail">Detail</a>
+                    <i class="fas fa-chevron-down"></i>
+                    <ul class="intinya">
+                        <div>
+                            <li><a href="#">Syarat & ketentuan</a></li>
+                        </div>
+                        <div>
+                            <li><a href="#">Biodata Pembuat</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="in"><a href="profile" class="info nav-item">Profile</a></div>
+            </li>
+            <li>
+                <div class="in"><a href="Login/logout" class="warning nav-item">Logout</a></div>
+            </li>
+        </ul>
+        </div>
     </header>
     </div>
     <main>
         <div class="container">
             <div class="register2">
                 <div class="cube-group">
-                        <li class="bukti">
-                            <h5>Riwayat Pembelian</h5>
-                            <table class="jadwall">
-                                <thead>
+                    <li class="bukti">
+                        <h5>Riwayat Pembelian</h5>
+                        <table class="jadwall">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Id Payment</th>
+                                    <th>Paket</th>
+                                    <th>Tanggal Mulai</th>
+                                    <th>Tanggal Selesai</th>
+                                    <th>Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 1; ?>
+                                <?php foreach ($transaksi as $row) : ?>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Id Payment</th>
-                                        <th>Paket</th>
-                                        <th>Tanggal Mulai</th>
-                                        <th>Tanggal Selesai</th>
-                                        <th>Keterangan</th>
+                                        <td><?= $no; ?></td>
+                                        <td><?= $row['id_transaksi']; ?></td>
+                                        <td><?= $row['paket']; ?></td>
+                                        <td><?= $row['tgl_pp']; ?></td>
+                                        <td><?= $row['tgl_selesai']; ?></td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </li>
-                        <li class="belilagi">
-                            <div class="bl">
-                                <a href="payment.php">
-                                    <h5>Beli Paket</h5>
-                                </a>
-                            </div>
-                        </li>
+                                    <?php $no++ ?>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="belilagi">
+                        <div class="bl">
+                            <a href="beliPaket">
+                                <h5>Beli Paket</h5>
+                            </a>
+                        </div>
+                    </li>
                     </ul>
                 </div>
             </div>

@@ -24,10 +24,19 @@
         <div class="register2">
             <div class="cube-group row bg-white">
                 <div class="col-md-1"></div>
-                <div class="col-md-4 d-flex justify-content-center">
+                <div class="col-md-4 d-flex justify-content-center flex-column">
                     <div class="foto-profile" id="foto-profile">
-                   
+                        <?php if($user->foto === "") : ?>
+                            <?php else : 
+                                $namaFoto = $user->foto;
+                            ?>
+                            <script>document.getElementById("foto-profile").style.backgroundImage = "url('../img/<?= session()->get('username')?>/<?=$namaFoto;?>')";</script>
+                        <?php endif ?>
                     </div>
+                    <form action="Dashboard/foto" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="foto-profile">
+                    <input type="submit" value="ubah foto">
+                </form>
                 </div>
                 <div class="col-md-6">
                     <ul class="data">
@@ -82,10 +91,8 @@
     <!-- Footer -->
     <?php include 'footer.php' ?>
 
-    <?php $nama = "rian.jpeg"; ?>
-
     <!-- Script -->
-    <script>document.getElementById("foto-profile").style.backgroundImage = "url('../img/<?=$nama;?>')";</script>
+    
     <script type="text/javascript" src="../JS/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

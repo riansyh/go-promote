@@ -24,6 +24,12 @@ class User_GoPromote extends Model
         return $query;
     }
 
+    public function saveGambar($data, $id)
+    {
+        $query = $this->db->query("UPDATE users_data SET foto='$data' where username='$id'");
+        return $query;
+    }
+
     public function updateUser($data, $id)
     {
         $query = $this->db->table($this->table)->update($data, array('username' => $id));

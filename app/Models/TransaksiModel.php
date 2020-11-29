@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class TransaksiModel extends Model
 {
-    protected $table = 'transaksi';
+    protected $table = 'jadwalpp';
 
     public function getTransaksi($id = false)
     {
@@ -14,7 +14,7 @@ class TransaksiModel extends Model
         if ($id === false) {
             return $this->where('username', $user)->findAll();
         } else {
-            return $this->getWhere(['id_transaksi' => $id]);
+            return $this->getWhere(['username' => $user]);
         }
     }
 

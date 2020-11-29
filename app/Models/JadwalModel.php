@@ -10,10 +10,11 @@ class JadwalModel extends Model
 
     public function getJadwal($id = false)
     {
+        $user = session()->get('username');
         if ($id === false) {
-            return $this->getAll();
+            return $this->where('username', $user)->findAll();
         } else {
-            return $this->getWhere(['id_transaksi' => $id]);
+            return $this->getWhere(['username' => $user]);
         }
     }
 }
