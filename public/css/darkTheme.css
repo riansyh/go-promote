@@ -1,0 +1,126 @@
+html[data-theme='light'] {
+    --bg: #fcfcfc;
+    --bgb-panel: #EBEEBE;
+    --color-headings: #333333;
+    --toggle-color: #4695f0;
+    --color-text: #333333;
+    --nav-color: #ffffff;
+    --frame-color: #ffffff;
+    --footer-top-color : #124985;
+    --footer-bottom-color : #142940;
+    --nav-text-color: #fcfcfc;
+    --image : url(../img/dot-grid.png);
+    --opacity : 1;
+  }
+  
+  .switch[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  .sw {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 25px;
+    background: #fcfcfc;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  .sw:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--toggle-color);
+    border-radius: 90px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .switch:checked + .sw {
+    background: var(--color-headings);
+  }
+  
+  .switch:checked + .sw:after {
+    left: calc(100% - 5px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  
+  .switch:active:after {
+    width: 130px;
+  }
+  
+  html[data-theme='dark'] {
+      
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-headings: #4695f0;
+    --toggle-color: #fcfcfc;
+    --color-text: #e7e7e7;
+    --nav-color: #242323;
+    --frame-color : #242323;
+    --footer-top-color : #242323;
+    --footer-bottom-color : #131212;
+    --nav-text-color: #4695f0;
+    --image : url();
+    --opacity : 1;
+  }
+  
+  body{
+      background-image: var(--image);      
+      opacity: var(--opacity);
+  }
+
+  .color-text-black, .sticky a {
+    color: var(--color-text);
+  }
+
+  .frame-color{
+      background-color: var(--frame-color);
+  }
+  
+  .nav-text-color {
+    color: var(--nav-text-color);
+  }
+  
+  .color-head {
+    color: var(--color-headings);
+  }
+  
+  body {
+    background-color: var(--bg);
+  }
+
+  .sticky, .bg_atas, .nav-con{
+      background-color: var(--nav-color);
+  }
+  
+  .dark-con {
+    background-color: var(--bg-panel);
+  }
+
+  .footer-top{
+    background-color: var(--footer-top-color);
+  }
+
+  .footer-bottom{
+      background-color: var(--footer-bottom-color);
+  }
+  
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    -webkit-transition: all 0.75s !important;
+    transition: all 0.75s !important;
+    -webkit-transition-delay: 0 !important;
+            transition-delay: 0 !important;
+  }
+  /*# sourceMappingURL=main.css.map */

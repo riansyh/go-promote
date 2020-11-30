@@ -1,15 +1,5 @@
-<?php
-include "function.php";
-$result = mysqli_query($conn, "SELECT * FROM jadwalpp");
-session_start();
-if (!isset($_SESSION['loginadmin'])) {
-    header("Location:loginadmin.php");
-}
-?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme=''>
 
 <head>
     <meta charset="UTF-8">

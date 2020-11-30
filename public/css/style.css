@@ -4,18 +4,16 @@
 @import "alert.css";
 @import "form.css";
 @import "foto-profile.css";
+@import "darkTheme.css";
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-
   font-family: "Work sans", arial, sans-serif;
-  background-color: white;
   margin: auto;
   position: relative;
-  background-image: url(../img/dot-grid.png);
 }
 
 .bg {
@@ -37,7 +35,6 @@ header {
   display: flex;
   margin: 50px auto;
   justify-content: space-between;
-  background-color: white;
   align-items: center;
   padding: 20px 20px;
   height: 80px;
@@ -53,11 +50,10 @@ header {
 .sticky {
   margin: 0;
   top: 0;
-  height: 70px;
   left: 50%;
+  height: 77px;
   transform: translate(-50%, 0);
   position: fixed;
-  background-color: #fff;
   border-radius: 0;
   width: 85%;
   border: none;
@@ -67,21 +63,23 @@ header {
   text-decoration: none;
 }
 
+.bg-nav{
+  opacity: 0;
+}
+
 .bg_atas {
+  opacity: 1;
   margin: 0;
   top: 0;
-  height: 80px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  height: 77px;
   position: fixed;
-  background-color: #fff;
   border-radius: 0;
   width: 100%;
   border: none;
   box-shadow: none;
-  box-sizing: border-box;
   z-index: 9999;
   text-decoration: none;
+  transition: .4s;
 }
 
 .Logo {
@@ -139,7 +137,6 @@ header .satu li a,
   position: relative;
   margin: 0 16px;
   text-decoration: none;
-  color: black;
   letter-spacing: 2px;
   font-weight: 500px;
   transition: 0.5s;
@@ -147,11 +144,6 @@ header .satu li a,
 
 header ul li a:hover {
   text-decoration: none;
-}
-
-.sticky .Logo,
-.sticky ul li a {
-  color: #000;
 }
 
 .info, .sticky .info {
@@ -211,13 +203,11 @@ header ul {
 }
 
 .intinya div {
-  background-color: #fff;
   height: 50px;
   transform: scaleY(100px);
 }
 
 .sticky .intinya div {
-  background-color: #fff;
   height: 50px;
   transform: scaleY(100px);
 }
@@ -247,6 +237,7 @@ header ul li div {
   height: 78px;
   line-height: 78px;
 }
+
 
 header .satu li .in::after,
 header .satu li .nav-item-detail::after,
@@ -280,6 +271,11 @@ header .satu li .home::after {
   left: 17%;
   border-radius: 10px;
   transition: 0.3s ease-out;
+}
+
+.top-switch{
+  margin-top: -18px;
+  margin-right: 20px;
 }
 
 /* Akhir dari navbar */
@@ -492,28 +488,10 @@ header .satu li .home::after {
 }
 
 .paket {
-  padding-top: 50px;
   font-size: 50px;
   text-align: center;
   padding-bottom: 34px;
   font-family: "Brandon Grotesque black", arial, sans-serif;
-  background-color: #fff;
-}
-
-.tPaket {
-  margin: 30px 100px;
-  width: 160px;
-  height: 50px;
-}
-
-.tPaket h1 {
-  color: white;
-  padding: 9px;
-  background-color: #e17055;
-  border-radius: 60px;
-  font-size: 30px;
-  margin-top: 6px;
-  font-weight: bold;
 }
 
 .product a {
@@ -521,14 +499,13 @@ header .satu li .home::after {
 }
 
 .rvw {
-  margin-top: 100px;
+  margin-top: 50px;
   padding-top: 10px;
   font-size: 45px;
   text-align: center;
   padding-bottom: 10px;
   font-weight: lighter;
   font-family: "Brandon Grotesque Black", arial, sans-serif;
-  background-color: #fff;
 }
 
 .rvw p {
@@ -591,7 +568,6 @@ body .rvw2 {
   margin: 80px;
   font-size: 20px;
   border-radius: 15px;
-  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -621,10 +597,9 @@ body .rvw2 {
   text-align: center;
   padding: 40px 80px;
   margin: 250px auto 100px auto;
-  border-radius: 30px;
+  border-radius: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  background-color: white;
 }
 
 .register-box h3 {
@@ -800,3 +775,5 @@ li {
   text-align: center;
   margin: 50px;
 }
+
+

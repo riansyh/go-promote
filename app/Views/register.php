@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme=''>
 
 <head>
 	<meta charset="UTF-8">
@@ -21,18 +21,18 @@
 	
 	<main>
 		<div class="container">
-			<div class="register-box">
-				<h3>Register</h3>
+			<div class="register-box frame-color">
+				<h3 class="color-text-black">Register</h3>
 				<form class="form" method="post" action="register">
-					<div class="form-manual">
+					<div class="form-manual color-text-black">
 						<label for="username">Username</label>
 						<input type="text" name="username" id="username" placeholder="username" required autocomplete="off">
 					</div>
-					<div class="form-manual">
+					<div class="form-manual color-text-black">
 						<label for="password">Password</label>
 						<input type="password" name="password" id="password" placeholder="password" required autocomplete="off">
 					</div>
-					<div class="form-manual">
+					<div class="form-manual color-text-black">
 						<label for="password_confirm">Konfirmasi Password</label>
 						<input type="password" name="password_confirm" placeholder="password" id="password_confirm" required>
 					</div>

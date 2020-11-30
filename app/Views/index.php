@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme='light'>
 
 <head>
     <meta charset="UTF-8">
@@ -15,41 +15,40 @@
     <title>GoPromote</title>
 </head>
 
-<body>
+<body id="body">
     <!-- Header -->
     <?php include 'navbar.php' ?>
 
-    <main>
         <div class="container">
             <div class="jmbtrn">
-                <div class="text">
+                <div class="text color-text-black">
                     <p class="intro-text-first">Promosikan Usahamu, <br> Tingkatkan Peluangmu!</h1>
                         <p class="text-awal">Bingung nyari tempat untuk promosikan usahamu? <br> atau mungkin promosinya gitu-gitu aja? <br>
-                            <span class="bold">GoPromote solusinya!</span> Promo sikan usahamu disini <br>
+                            GoPromote solusinya! Promo sikan usahamu disini <br>
                             dan dapatkan keuntungan yang melimpah </p>
                 </div>
                 <div class="foto-ppm"></div>
             </div>
 
-            <div class="intro-text">
+            <div class="intro-text frame-color color-text-black">
                 <h1>Apa Itu GoPromote?</h1>
                 <p>GoPromote merupakan sebuah layanan yang berfungsi untuk menawarkan jasa promosi berbayar (paid promote) dengan berbagai
                     varian paket yang ditawarkan sehingga kamu bisa dengan mudah mempromosikan produk/usaha yang dimilikimu kepada para
                     penguna sosial media</p>
             </div>
 
-            <div class="intro-text">
+            <div class="intro-text frame-color color-text-black">
                 <h1>Kenapa Harus Memilih Kami?</h1>
                 <p>Karena dengan kamu menggunakan jasa paid promote kami, usaha yang kamu promosikan akan dilirik oleh banyak orang dan itu membuat usahamu bisa lebih berkembang</p>
             </div>
 
             <!-- Paket -->
-            <h1 class="paket" id="produk">Pilihan Paket</h1>
-            <p class="paket2">Kami menyediakan beberapa pilihan paket paid promote</p>
+            <h1 class="paket color-text-black" id="produk">Pilihan Paket</h1>
+            <p class="paket2 color-text-black">Kami menyediakan beberapa pilihan paket paid promote</p>
             <div class="product">
                 <div class="paket-satu">
                     <h1 class="nama-paket">Bronze</h1>
-                    <h1>Rp.15.000</h2>
+                    <h1>Rp.15.000</h1>
                         <ul>
                             <li>1 Day Keep</li>
                             <li>1x Feed</li>
@@ -59,7 +58,7 @@
 
                 <div class="paket-dua">
                     <h1 class="nama-paket">Silver</h1>
-                    <h1>Rp.25.000</h2>
+                    <h1>Rp.25.000</h1>
                         <ul>
                             <li>2 Day Keep</li>
                             <li>1x Feed</li>
@@ -93,9 +92,9 @@
 
             <!-- Review -->
             <div class="rvw" id="review">
-                <h1>Testimoni</h1>
+                <h1 class="color-text-black">Testimoni</h1>
             </div>
-            <p class="rvw2">Berikut merupakan beberapa testimoni tentang produk kami</p>
+            <p class="rvw2 color-text-black">Berikut merupakan beberapa testimoni tentang produk kami</p>
             <div class="review">
                 <div class="r1">
                     <a href="#"></a>
@@ -110,7 +109,6 @@
                 </div>
             </div>
         </div>
-    </main>
 
     <!-- Footer -->
     <?php include 'footer.php' ?>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme=''>
 
 <head>
 	<meta charset="UTF-8">
@@ -21,8 +21,8 @@
 
 	<main>
 		<div class="container">
-			<div class="register-box">
-				<h3>Login</h3>
+			<div class="register-box frame-color">
+				<h3 class="color-text-black">Login</h3>
 
 				<?php if (session()->get('success')) : ?>
 					<div class="manual-alert succes" role="alert">
@@ -32,15 +32,15 @@
 
 				<form class="form" method="post" action="">
 					<div class="form-manual">
-						<label for="username">Username</label>
+						<label for="username" class="color-text-black">Username</label>
 						<input type="text" name="username" required autocomplete="off" placeholder="username" value="<?= get_cookie('username') ?>">
 					</div>
 
-					<div class="form-manual">
+					<div class="form-manual color-text-black">
 						<label for="password">Password</label>
 						<input type="password" name="password" required autocomplete="off" placeholder="password">
 					</div>
-					<div class="remember">
+					<div class="remember color-text-black">
 						<input type="checkbox" name="remember" id="remember" class="remember-me">
 						<label for="remember">Remember Me!</label>
 					</div>

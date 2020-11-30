@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme=''>
 
 <head>
     <meta charset="UTF-8">
@@ -16,56 +16,7 @@
 </head>
 
 <body>
-    <div class="nav"></div>
-    <header>
-        <a href="/" class="Logo"><img src="img/logo.png" alt=""></a>
-        <ul class="satu">
-            <li>
-                <div class="home in">
-                    <a href="/" class="nav-item">Home</a>
-                </div>
-            </li>
-            <li>
-                <div class="in">
-                    <a href="/#produk" class="nav-item">Product</a>
-                </div>
-            </li>
-            <li>
-                <div class="in">
-                    <a href="/#review" class="nav-item">Testimoni</a>
-                </div>
-            </li>
-            <li>
-                <div class="in">
-                    <a href="/#bottom" class="nav-item">Contact</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item-detail">
-                    <a href="#" class="nav-detail">Detail</a>
-                    <i class="fas fa-chevron-down"></i>
-                    <ul class="intinya">
-                        <div>
-                            <li><a href="#">Syarat & ketentuan</a></li>
-                        </div>
-                        <div>
-                            <li><a href="#">Biodata Pembuat</a></li>
-                        </div>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <div class="in"><a href="profile" class="info nav-item">Profile</a></div>
-            </li>
-            <li>
-                <div class="in"><a href="Login/logout" class="warning nav-item">Logout</a></div>
-            </li>
-        </ul>
-        </div>
-    </header>
-    </div>
+    <?php include 'navbar.php' ?>
     <main>
         <div class="container">
             <div class="register2">

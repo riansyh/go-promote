@@ -1,5 +1,5 @@
 <footer class="bottom" id="bottom">
-    <div class="container2 d-flex justify-content-center">
+    <div class="container2 d-flex justify-content-center footer-top">
         <div class="container row">
             <div class="col-md-4 kolom">
                 <h1 class="bot-h1">Navigation</h1>
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="container1">
+    <div class="container1 footer-bottom">
         <div class="middle">
             <p>@ 2020 - VDJCISN</p>
         </div>
