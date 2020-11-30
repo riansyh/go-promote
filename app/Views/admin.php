@@ -22,7 +22,7 @@
             <div class="register2">
                 <div class="cube-group">
                     <li class="bukti">
-                        <h5 class="riwayat-pembelian color-text-black">Riwayat Pembelian</h5>
+                        <h5 class="riwayat-pembelian">Daftar Jadwal Promosi</h5>
                         <table class="jadwall">
                             <thead>
                                 <tr>
@@ -32,6 +32,8 @@
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
                                     <th>Keterangan</th>
+                                    <th class="center" colspan="2">Aksi</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,18 +46,13 @@
                                         <td><?= $row['tgl_pp']; ?></td>
                                         <td><?= $row['tgl_selesai']; ?></td>
                                         <td><?= $row['status']; ?></td>
+                                        <td><a href="transaksi/update/<?= $row['id_transaksi']; ?>">Selesai</a></td>
+                                        <td><a href="transaksi/delete/<?= $row['id_transaksi']; ?>">Hapus</a></td>
                                     </tr>
                                     <?php $no++ ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                    </li>
-                    <li class="belilagi">
-                        <div class="bl">
-                            <a href="beli">
-                                <h5>Beli Paket</h5>
-                            </a>
-                        </div>
                     </li>
                     </ul>
                 </div>

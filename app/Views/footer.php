@@ -3,11 +3,11 @@
         <div class="container row">
             <div class="col-md-4 kolom">
                 <h1 class="bot-h1">Navigation</h1>
-                <p><a href="#">Home</a></p>
-                <p><a href="#produk">Product</a></p>
-                <p><a href="#bottom">Contact</a></p>
-                <p><a href="">Syarat & Ketentuan</a></p>
-                <p><a href="">Biodata Pembuat</a></p>
+                <p><a href="/">Home</a></p>
+                <p><a href="/#produk">Product</a></p>
+                <p><a href="/#bottom">Contact</a></p>
+                <p><a href="/sk">Syarat & Ketentuan</a></p>
+                <p><a href="#">Biodata Pembuat</a></p>
             </div>
             <div class="col-md-4 kolom">
                 <h1 class="bot-h1">Contact</h1>

@@ -16,14 +16,21 @@ class Transaksi extends BaseController
         return view('dashboard', $data);
     }
 
+    public function admin()
+    {
+        $model = new JadwalModel();
+        $data['transaksi'] = $model->getAll();
+        return view('admin', $data);
+    }
+
     public function update($id)
     {
-        $model = new TransaksiModel();
+        $model = new JadwalModel();
         $data = array(
             'status' => 'Selesai'
         );
-        $model->updateTransaksi($data, $id);
-        return redirect()->to('/dashboard');
+        $model->updateJadwal($data, $id);
+        return redirect()->to('/admin');
     }
 
     public function beli()
@@ -80,5 +87,12 @@ class Transaksi extends BaseController
         $model->save($newData);
 
         return redirect()->to('/dashboard');
+    }
+
+    public function delete($id)
+    {
+        $model = new JadwalModel();
+        $model->deleteJadwal($id);
+        return redirect()->to("/admin");
     }
 }

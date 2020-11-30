@@ -26,10 +26,10 @@
             <li>
                 <div class="nav-item-detail ">
                     <a href="#" class="nav-detail color-text-black">Detail</a>
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down color-text-black"></i>
                     <ul class="intinya">
                         <div>
-                            <li class="nav-con"><a href="#sk">Syarat & ketentuan</a></li>
+                            <li class="nav-con"><a href="/sk">Syarat & ketentuan</a></li>
                         </div>
                         <div>
                             <li class="nav-con"><a href="#">Biodata Pembuat</a></li>

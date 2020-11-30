@@ -29,11 +29,11 @@
                     </div>
                 </div>
             <?php endif; ?>
-            <div class="cube-group row bg-white">
-                <div class="col-md-1"></div>
+            <div class="cube-group row frame-color">
+                <div class="col-md-2"></div>
                 <div class="col-md-4 d-flex justify-content-center flex-column">
                     <div class="foto-profile" id="foto-profile">
-                        <?php if ($user->foto === "") : ?>
+                        <?php if ($user->foto === " ") : ?>
                         <?php else :
                             $namaFoto = $user->foto;
                         ?>
@@ -55,33 +55,33 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <h4>Data Akun</h4>
+                                            <h4 class="color-text-black">Data Akun</h4>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Nama</td>
+                                        <td class="color-text-black">Nama</td>
                                     </tr>
                                     <tr>
-                                        <td><?= $user->nama ?></td>
+                                        <td class="color-text-black"><?= $user->nama ?></td>
                                     </tr>
                                     <tr>
-                                        <td>Email</td>
+                                        <td class="color-text-black">Email</td>
                                     </tr>
                                     <tr>
-                                        <td><?= $user->email; ?></td>
+                                        <td class="color-text-black"><?= $user->email; ?></td>
                                     </tr>
                                     <tr>
-                                        <td>Instagram</td>
+                                        <td class="color-text-black">Instagram</td>
                                     </tr>
                                     <tr>
-                                        <td><?= $user->instagram; ?></td>
+                                        <td class="color-text-black"><?= $user->instagram; ?></td>
 
                                     </tr>
                                     <tr>
-                                        <td>Nomor HP</td>
+                                        <td class="color-text-black">Nomor HP</td>
                                     </tr>
                                     <tr>
-                                        <td><?= $user->no_hp; ?></td>
+                                        <td class="color-text-black"><?= $user->no_hp; ?></td>
                                     </tr>
                                     <tr>
                                         <td><button class="input" onclick="window.location.href='/edit/<?= session()->get('username'); ?>'">Edit</button></td>

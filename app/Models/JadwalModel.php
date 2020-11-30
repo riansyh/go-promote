@@ -17,4 +17,21 @@ class JadwalModel extends Model
             return $this->getWhere(['username' => $user]);
         }
     }
+
+    public function getAll()
+    {
+        return $this->findAll();
+    }
+
+    public function deleteJadwal($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('id_transaksi' => $id));
+        return $query;
+    }
+
+    public function updateJadwal($data, $id)
+    {
+        $query = $this->db->table($this->table)->update($data, array('id_transaksi' => $id));
+        return $query;
+    }
 }

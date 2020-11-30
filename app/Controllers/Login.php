@@ -41,6 +41,11 @@ class Login extends BaseController
                 $username = session()->get('username');
                 $data['user'] = $modeluser->getUser($username)->getRow();
 
+                //cek admin atau bukan
+                if ($user['level'] === "2") {
+                    return redirect()->to("admin");
+                }
+                
                 //Cookie
                 $remember = $this->request->getVar('remember');
                 if ($remember == 'on') {
@@ -129,6 +134,10 @@ class Login extends BaseController
     
     public function bio(){
         return view('bio_pembuat');
+    }
+
+    public function sk(){
+        return view('sk');
     }
 
 	//--------------------------------------------------------------------

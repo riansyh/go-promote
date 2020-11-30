@@ -33,12 +33,14 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->add('/', 'Home::index');
 $routes->add('register', 'Login::register');
+$routes->add('sk', 'Login::sk');
 $routes->add('login', 'Login::login');
 $routes->add('dashboard', 'Transaksi::index', ['filter' => 'auth']);
 $routes->add('bio', 'Login::bio');
 $routes->add('edit/(:alphanum)', 'Dashboard::edit/$1');
 $routes->add('profile', 'Dashboard::profile');
 $routes->add('beli', 'Dashboard::beliPage');
+$routes->add('admin', 'Transaksi::admin', ['filter' => 'auth']);
 /**
  * There will often be times that you need additional routing and you
  * need it to be able to override any defaults in this file. Environment
