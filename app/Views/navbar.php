@@ -47,7 +47,7 @@
                                                         echo "checked";
                                                     }
                                                     ?> name="theme" class="switch" /><label for="switch" class="sw">
-                                                    </label>
+                </label>
 
             </li>
             <?php if (!session()->get('isLoggedIn')) : ?>
@@ -63,14 +63,20 @@
                         <div class="in"><a href="/profile" class="info nav-item">Profile</a></div>
                     </li>
                 <?php else : ?>
-                    <li>
-                        <div class="in"><a href="/dashboard" class="info nav-item">Dashboard</a></div>
-                    </li>
+                    <?php if (session()->get('level') === 2) : ?>
+                        <li>
+                            <div class="in"><a href="/admin" class="info nav-item">Admin</a></div>
+                        </li>
+                    <?php else : ?>
+                        <li>
+                            <div class="in"><a href="/dashboard" class="info nav-item">Dashboard</a></div>
+                        </li>
                     <?php endif; ?>
-                    <li>
-                        <div class="in"><a href="/Login/logout" class="warning nav-item">Logout</a></div>
-                    </li>
                 <?php endif; ?>
+                <li>
+                    <div class="in"><a href="/Login/logout" class="warning nav-item">Logout</a></div>
+                </li>
+            <?php endif; ?>
         </ul>
 
 </div>

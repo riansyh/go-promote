@@ -43,6 +43,10 @@ class Login extends BaseController
 
                 //cek admin atau bukan
                 if ($user['level'] === "2") {
+                    $data = [
+                        'level' => 2,
+                    ];
+                    session()->set($data);
                     return redirect()->to("admin");
                 }
                 

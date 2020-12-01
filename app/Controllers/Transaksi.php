@@ -36,6 +36,7 @@ class Transaksi extends BaseController
     public function beli()
     {
         helper(['form']);
+        $session = session();
         $username = session()->get('username');
 
         $namaFile = $_FILES["konten"]["name"];
@@ -43,35 +44,41 @@ class Transaksi extends BaseController
         $error = $_FILES["konten"]["error"];
         $tmpName = $_FILES["konten"]["tmp_name"];
 
-        if ($error === 4) {
-            echo "tidak ada foto yang diupload";
-        }
-
         $extensiFileAllowed = ["jpg", "jpeg", "png"];
         $extensiFile = explode('.', $namaFile);
         $extensiFile = strtolower(end($extensiFile));
-        if (!in_array($extensiFile, $extensiFileAllowed)) {
-            echo "hei salah masukkan type data";
-        }
 
-        if ($sizeFile > 2000000) {
-            echo "kegedean boi";
+        if($error === 4){
+            $session->setFlashdata('error', 'Tidak ada foto yang diupload!');
+            return redirect()->to('/profile');
+        }else{
+            if(!in_array($extensiFile, $extensiFileAllowed)){            
+                $session->setFlashdata('error', 'Extensi File Salah!');
+                return redirect()->to('/profile');
+            }
+            else{
+                if($sizeFile > 2000000){
+                    $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
+                    return redirect()->to('/profile');
+                }
+            }
         }
 
         $namaFileBaru = uniqid();
         $namaFileBaru .= '.' . $extensiFile;
         echo $namaFileBaru;
 
-        $session = session()->get('username');
+        $sesi = session()->get('username');
 
-        $dir = "konten/$session";
+        $dir = "konten/$sesi";
         if (!is_dir($dir)) {
             mkdir("konten/" . session()->get('username'));
         }
         move_uploaded_file($tmpName, 'konten/' . session()->get('username') . '/' . $namaFileBaru);
 
         $model = new TransaksiModel();
-        $tgltransaksi = new Time('now');
+        $time=time();
+        $tgltransaksi = date("Y-m-d",$time);
         $newData = [
             'metode' => $this->request->getVar('metode'),
             'tgl_transaksi' => $tgltransaksi,

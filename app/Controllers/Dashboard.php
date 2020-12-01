@@ -94,10 +94,9 @@ class Dashboard extends BaseController
             'no_hp' => $this->request->getPost('nohp'),
             'email' => $this->request->getPost('email'),
             'instagram' => $this->request->getPost('instagram'),
-            'foto' => " ",
         );
         $model->updateUser($data, $username);
-        return redirect()->to('/dashboard');
+        return redirect()->to('/profile');
     }
 
     public function beliPage(){

@@ -37,7 +37,7 @@
                             <tbody>
                                 <?php $no = 1; ?>
                                 <?php foreach ($transaksi as $row) : ?>
-                                    <tr>
+                                    <tr class="color-text-black">
                                         <td><?= $no; ?></td>
                                         <td><?= $row['id_transaksi']; ?></td>
                                         <td><?= $row['paket']; ?></td>

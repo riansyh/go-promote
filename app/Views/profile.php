@@ -22,14 +22,7 @@
     <!-- tampilan 1 -->
     <div class="container">
         <div class="register2">
-            <?php if (session()->get('error')) : ?>
-                <div class="col-12">
-                    <div class="manual-alert wrng">
-                        <?= session()->get('error') ?>
-                    </div>
-                </div>
-            <?php endif; ?>
-            <div class="cube-group row frame-color cube-shadow">
+            <div class="cube-group row frame-color cube-shadow tinggi-min">
                 <div class="col-md-1"></div>
                 <div class="col-md-4 d-flex justify-content-center flex-column">
                     <div class="foto-profile" id="foto-profile">
@@ -42,10 +35,16 @@
                             </script>
                         <?php endif ?>
                     </div>
+                    <?php if (session()->get('error')) : ?>
+                            <div class="manual-alert-foto wrng">
+                                <?= session()->get('error') ?>
+                            </div>
+                    <?php endif; ?>
                     <form action="Dashboard/foto" method="POST" enctype="multipart/form-data">
                         <input type="file" name="foto-profile">
                         <input type="submit" value="ubah foto">
                     </form>
+                    
                 </div>
                 <div class="col-md-6">
                     <ul class="data">

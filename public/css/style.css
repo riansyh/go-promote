@@ -362,6 +362,10 @@ body .rvw2 {
   padding: 40px 0px;
 }
 
+.tinggi-min{
+  min-height: 500px
+}
+
 .cube-group {
   position: relative;
   margin-top: 220px;
@@ -462,10 +466,6 @@ a:hover {
 
 .jadwall tbody tr {
   border-bottom: 1px solid #dddddd;
-}
-
-.jadwall tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
 }
 
 .jadwall tbody tr:last-of-type {

@@ -20,9 +20,9 @@
     <main>
         <div class="container">
             <div class="register2">
-                <div class="cube-group">
+                <div class="cube-group frame-color">
                     <li class="bukti">
-                        <h5 class="riwayat-pembelian">Daftar Jadwal Promosi</h5>
+                        <h5 class="riwayat-pembelian color-text-black">Daftar Jadwal Promosi</h5>
                         <table class="jadwall">
                             <thead>
                                 <tr>
@@ -39,7 +39,7 @@
                             <tbody>
                                 <?php $no = 1; ?>
                                 <?php foreach ($transaksi as $row) : ?>
-                                    <tr>
+                                    <tr class="color-text-black">
                                         <td><?= $no; ?></td>
                                         <td><?= $row['id_transaksi']; ?></td>
                                         <td><?= $row['paket']; ?></td>
