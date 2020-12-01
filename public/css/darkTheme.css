@@ -10,6 +10,7 @@ html[data-theme='light'] {
     --footer-bottom-color : #142940;
     --nav-text-color: #fcfcfc;
     --image : url(../img/dot-grid.png);
+    --bg-toogle : url(../img/sun.svg);
     --opacity : 1;
   }
   
@@ -28,7 +29,7 @@ html[data-theme='light'] {
     display: block;
     border-radius: 100px;
     position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .15) ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
   }
   
   .sw:after {
@@ -40,12 +41,19 @@ html[data-theme='light'] {
     height: 20px;
     background: var(--toggle-color);
     border-radius: 90px;
+    color: white;
+    transform: rotate(180deg);
+    background-image: var(--bg-toogle);
+    background-size: 13px;
+    background-position: center;
+    background-repeat: no-repeat;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
-  
+
   .switch:checked + .sw {
     background: var(--color-headings);
+    
   }
   
   .switch:checked + .sw:after {
@@ -59,7 +67,7 @@ html[data-theme='light'] {
   }
   
   html[data-theme='dark'] {
-      
+    --bg-toogle : url(../img/moon.svg);
     --bg: #333333;
     --bg-panel: #434343;
     --color-headings: #4695f0;

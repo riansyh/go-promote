@@ -20,7 +20,7 @@
     <main>
         <div class="container">
             <div class="register2">
-                <div class="cube-group">
+                <div class="cube-group frame-color cube-shadow">
                     <li class="bukti">
                         <h5 class="riwayat-pembelian color-text-black">Riwayat Pembelian</h5>
                         <table class="jadwall">

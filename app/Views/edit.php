@@ -21,44 +21,44 @@
 
     <!-- tampilan 1 -->
     <div class="register2">
-        <div class="cube-group">
-            <h4>Data Akun</h4>
+        <div class="cube-group center-manual">
             <ul class="data">
-                <li class="biodata">
+                <li class="biodata frame-color cube-shadow">
                     <form method="post" action="/Dashboard/update">
-                        <input type="hidden" name="username" value=<?= $user->username; ?>>
-                        <table class="bio">
-                            <tbody>
-                                <tr>
-                                    <td>Nama</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="name" required value=<?= $user->nama ?>></td>
-                                </tr>
-                                <tr>
-                                    <td>Email</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="email" name="email" required value=<?= $user->email; ?>></td>
-                                </tr>
-                                <tr>
-                                    <td>Instagram</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" name="instagram" required value=<?= $user->instagram; ?>></td>
+                        <h1 class="color-text-black">Data Akun</h4>
+                            <input type="hidden" name="username" value=<?= $user->username; ?>>
+                            <table class="bio">
+                                <tbody>
+                                    <tr>
+                                        <td class="color-text-black">Nama</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="name" required value=<?= $user->nama ?>></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="color-text-black">Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="email" name="email" required value=<?= $user->email; ?>></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="color-text-black">Instagram</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" name="instagram" required value=<?= $user->instagram; ?>></td>
 
-                                </tr>
-                                <tr>
-                                    <td>Nomor HP</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="number" name="nohp" required value=<?= $user->no_hp; ?>></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="submit" name="update" value="Update"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </tr>
+                                    <tr>
+                                        <td class="color-text-black">Nomor HP</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" name="nohp" required value=<?= $user->no_hp; ?>></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="submit" name="update" value="Update"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                     </form>
                 </li>
             </ul>

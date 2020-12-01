@@ -29,8 +29,8 @@
                     </div>
                 </div>
             <?php endif; ?>
-            <div class="cube-group row frame-color">
-                <div class="col-md-2"></div>
+            <div class="cube-group row frame-color cube-shadow">
+                <div class="col-md-1"></div>
                 <div class="col-md-4 d-flex justify-content-center flex-column">
                     <div class="foto-profile" id="foto-profile">
                         <?php if ($user->foto === " ") : ?>

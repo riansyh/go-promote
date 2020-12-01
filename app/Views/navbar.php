@@ -46,7 +46,8 @@
                                                     if (get_cookie('theme') == 1) {
                                                         echo "checked";
                                                     }
-                                                    ?> name="theme" class="switch" /><label for="switch" class="sw"></label>
+                                                    ?> name="theme" class="switch" /><label for="switch" class="sw">
+                                                    </label>
 
             </li>
             <?php if (!session()->get('isLoggedIn')) : ?>

@@ -1,0 +1,254 @@
+/* Navbar */
+
+header {
+    position: fixed;
+    width: 85%;
+    display: flex;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    height: 80px;
+    z-index: 999999;
+    border-radius: 8px;
+    transition: 0.4s;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0 0 40px 0.1px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+  }
+  
+  .sticky {
+    margin: 0;
+    top: 0;
+    left: 50%;
+    height: 77px;
+    transform: translate(-50%, 0);
+    position: fixed;
+    border-radius: 0;
+    width: 85%;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    z-index: 9999;
+    text-decoration: none;
+  }
+  
+  .bg-nav {
+    opacity: 0;
+  }
+  
+  .bg_atas {
+    opacity: 1;
+    margin: 0;
+    top: 0;
+    height: 77px;
+    position: fixed;
+    border-radius: 0;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-decoration: none;
+    transition: 0.4s;
+  }
+  
+  .Logo {
+    position: relative;
+    transition: 0.6s;
+  }
+  
+  .Logo img {
+    top: 2px;
+    position: relative;
+    transform: scale(0.5);
+    width: 131px;
+    transition: 0.6s;
+  }
+  
+  h2 {
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 9998;
+    transition: 0.2s 0.1s;
+    opacity: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  .hdua {
+    margin: 0;
+    width: 100%;
+    opacity: 100%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-bottom: 2px solid rgba(87, 84, 84, 0.1);
+  }
+  
+  header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header ul li {
+    position: relative;
+    list-style: none;
+  }
+  
+  header .satu li a,
+  .info,
+  .warning,
+  .login {
+    font-size: 12.5px;
+    font-family: "Work sans", arial, sans-serif;
+    position: relative;
+    margin: 0 16px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.5s;
+  }
+  
+  header ul li a:hover {
+    text-decoration: none;
+  }
+  
+  .info,
+  .sticky .info {
+    color: #0487df;
+    font-weight: bold;
+  }
+  
+  .warning,
+  .sticky .warning {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  header ul li .home {
+    font-weight: bold;
+  }
+  
+  header ul li .drpdwn {
+    min-width: 100px;
+    min-height: 10px;
+    transform: scaleY(10px);
+    display: none;
+    position: absolute;
+    background-color: salmon;
+    padding: 12px 16px;
+  }
+  
+  header ul li a .nav-item {
+    display: block;
+  }
+  
+  header ul {
+    float: right;
+  }
+  
+  .nav-item-detail:hover > ul {
+    display: block;
+  }
+  
+  .intinya {
+    display: none;
+    float: left;
+    position: absolute;
+    width: 180px;
+    left: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .intinya li {
+    line-height: 50px;
+    padding-left: 0px;
+  }
+  
+  .intinya div li a {
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    transition: 0.2s;
+  }
+  
+  .intinya div {
+    height: 50px;
+    transform: scaleY(100px);
+  }
+  
+  .sticky .intinya div {
+    height: 50px;
+    transform: scaleY(100px);
+  }
+  
+  .intinya div li a:hover {
+    color: rgba(34, 184, 211, 0.979);
+  }
+  
+  .nav-item-detail i {
+    transform: scale(0.9);
+    transform: translateY(1px);
+    margin-left: -13px;
+    transition: 0.15s ease-out;
+  }
+  
+  .nav-item-detail:hover i {
+    transform: rotate(-180deg);
+  }
+  
+  header ul li div {
+    height: 80px;
+    line-height: 80px;
+    transition: 0.3s;
+  }
+  
+  .sticky ul li div {
+    height: 78px;
+    line-height: 78px;
+  }
+  
+  header .satu li .in::after,
+  header .satu li .nav-item-detail::after,
+  header ul li .loggin::after,
+  header ul li .register::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #3b94ed;
+    position: absolute;
+    bottom: 0%;
+    left: 13%;
+    border-radius: 15px;
+    transition: 0.3s ease-out;
+  }
+  
+  header .satu li .in:hover::after,
+  header .satu li .nav-item-detail:hover::after,
+  header ul li .loggin:hover::after,
+  header ul li .register:hover::after {
+    width: 75%;
+  }
+  
+  header .satu li .home::after {
+    content: "";
+    width: 75%;
+    height: 3px;
+    background-color: #3b94ed;
+    position: absolute;
+    bottom: 0%;
+    left: 17%;
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+  }
+  
+  .top-switch {
+    margin-top: -18px;
+    margin-right: 20px;
+  }
+  
+  /* Akhir dari navbar */

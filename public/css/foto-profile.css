@@ -1,10 +1,13 @@
 .foto-profile{
     width: 200px;
     height: 200px;
-    background-size: cover;
-    border: 2px solid #038ade;
-    box-shadow: ;
+    background-size: 240px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,.05) ;
     border-radius: 100%;
     margin-top: 20px;
+    margin: auto;
     background-image: url(../img/no-foto.png);
 }
