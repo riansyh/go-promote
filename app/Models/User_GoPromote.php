@@ -20,8 +20,9 @@ class User_GoPromote extends Model
 
     public function getAll()
     {
-        return $this->findAll();
-    }    
+        $query = $this->db->query("SELECT b.username, a.nama, COUNT(b.username) as 'jumlah' FROM transaksi b JOIN users_data a ON b.username = a.username GROUP BY username");
+        return $query;
+    }
 
     public function saveUser($data)
     {

@@ -22,7 +22,7 @@
             <div class="register2">
                 <div class="cube-group frame-color cube-shadow">
                     <li class="bukti">
-                        <?php if (session()->get('level') === 1) : ?>
+                        <?php if (session()->get('level') === "1") : ?>
                             <h5 class="riwayat-pembelian color-text-black">Riwayat Pembelian</h5>
                             <table class="jadwall">
                                 <thead>
@@ -71,12 +71,12 @@
                         </thead>
                         <tbody>
                             <?php $no = 1; ?>
-                            <?php foreach ($users as $row) : ?>
+                            <?php foreach ($rows->getResult() as $row) : ?>
                                 <tr class="color-text-black">
                                     <td><?= $no; ?></td>
-                                    <td><?= $row['username']; ?></td>
-                                    <td><?= $row['nama']; ?></td>
-                                    <td></td>
+                                    <td><?= $row->username; ?></td>
+                                    <td><?= $row->nama; ?></td>
+                                    <td><?= $row->jumlah; ?></td>
                                 </tr>
                                 <?php $no++ ?>
                             <?php endforeach; ?>

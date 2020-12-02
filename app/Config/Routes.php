@@ -35,7 +35,7 @@ $routes->add('/', 'Home::index');
 $routes->add('register', 'Login::register');
 $routes->add('sk', 'Login::sk');
 $routes->add('login', 'Login::login');
-$routes->add('dashboard', 'Transaksi::index', ['filter' => 'auth']);
+$routes->add('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->add('bio', 'Login::bio', ['filter' => 'auth']);
 $routes->add('edit', 'Dashboard::edit', ['filter' => 'auth']);
 $routes->add('profile', 'Dashboard::profile', ['filter' => 'auth']);

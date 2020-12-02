@@ -10,24 +10,13 @@ use CodeIgniter\I18n\Time;
 class Transaksi extends BaseController
 {
 
-    public function index()
-    {
-        $model = new JadwalModel();
-        $model2 = new User_GoPromote();
-
-        $data['users'] = $model2->getAll();
-        $data['transaksi'] = $model->getJadwal();
-        return view('dashboard', $data);
-    }
-
     public function admin()
     {
-        if(session()->get('level') === "2"){
-        $model = new JadwalModel();
-        $data['transaksi'] = $model->getAll();
-        return view('admin', $data);
-        }
-        else{
+        if (session()->get('level') === "2") {
+            $model = new JadwalModel();
+            $data['transaksi'] = $model->getAll();
+            return view('admin', $data);
+        } else {
             return redirect()->to('dashboard');
         }
     }
@@ -57,16 +46,15 @@ class Transaksi extends BaseController
         $extensiFile = explode('.', $namaFile);
         $extensiFile = strtolower(end($extensiFile));
 
-        if($error === 4){
+        if ($error === 4) {
             $session->setFlashdata('error', 'Tidak ada foto yang diupload!');
             return redirect()->to('/profile');
-        }else{
-            if(!in_array($extensiFile, $extensiFileAllowed)){            
+        } else {
+            if (!in_array($extensiFile, $extensiFileAllowed)) {
                 $session->setFlashdata('error', 'Extensi File Salah!');
                 return redirect()->to('/profile');
-            }
-            else{
-                if($sizeFile > 2000000){
+            } else {
+                if ($sizeFile > 2000000) {
                     $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
                     return redirect()->to('/profile');
                 }
@@ -86,8 +74,8 @@ class Transaksi extends BaseController
         move_uploaded_file($tmpName, 'konten/' . session()->get('username') . '/' . $namaFileBaru);
 
         $model = new TransaksiModel();
-        $time=time();
-        $tgltransaksi = date("Y-m-d",$time);
+        $time = time();
+        $tgltransaksi = date("Y-m-d", $time);
         $newData = [
             'metode' => $this->request->getVar('metode'),
             'tgl_transaksi' => $tgltransaksi,
@@ -120,5 +108,5 @@ class Transaksi extends BaseController
         $data['transaksi'] = $transaksi->getTransaksi($id)->getRow();
         $data['user'] = $user->getUser($data['transaksi']->username)->getRow();
         echo view('detail', $data);
-    }    
+    }
 }

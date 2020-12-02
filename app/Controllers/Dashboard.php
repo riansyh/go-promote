@@ -4,17 +4,22 @@ use App\Models\JadwalModel;
 class Dashboard extends BaseController
 {
 	
-	public function index()
+    public function index()
     {
+        $model = new JadwalModel();
+        $model2 = new User_GoPromote();
         $username = session()->get('username');
-        $model = new User_GoPromote();
-        $data['user'] = $model->getUser($username)->getRow();
 
-        if ($data['user']->nama === "") {
-            return redirect()->to("edit/$username");
+        if (session()->get('level') === "2") {
+            $data['rows'] = $model2->getAll();
         } else {
-            return view('dashboard',  $data);
+            $data['transaksi'] = $model->getJadwal();
+            $data['user'] = $model2->getUser($username)->getRow();
+            if ($data['user']->nama === " ") {
+                return redirect()->to("edit");
+            } 
         }
+        return view('dashboard', $data);
     }
 
     public function edit()

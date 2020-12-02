@@ -113,10 +113,9 @@
         foto.addEventListener('change', function() {
             var p = foto.value;
             var filename = p.replace(/^.*[\\\/]/, '')
-            var extention;
-            extention = fileName.split('.').pop();
-            filename = filename.slice(0,8)+'...';
-            showName.innerHTML = filename + extention
+            extension = filename.split('.').pop()
+            filename = filename.slice(0,12)+'...'
+            showName.innerHTML = filename+extension
             showName.style.visibility='visible'
         })
     </script>

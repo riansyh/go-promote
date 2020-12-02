@@ -59,9 +59,15 @@
                 </li>
             <?php else : ?>
                 <?php if ($url = $_SERVER['REQUEST_URI'] === "/dashboard") : ?>
-                    <li>
-                        <div class="in"><a href="/profile" class="info nav-item">Profile</a></div>
-                    </li>
+                    <?php if (session()->get('level') === "1") : ?>
+                        <li>
+                            <div class="in"><a href="/profile" class="info nav-item">Profile</a></div>
+                        </li>
+                    <?php else : ?>
+                        <li>
+                            <div class="in"><a href="/admin" class="info nav-item">Admin</a></div>
+                        </li>
+                    <?php endif ?>
                 <?php else : ?>
                     <?php if (session()->get('level') === 2) : ?>
                         <li>
