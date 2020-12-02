@@ -41,7 +41,7 @@
                                 <?php foreach ($transaksi as $row) : ?>
                                     <tr class="color-text-black">
                                         <td><?= $no; ?></td>
-                                        <td><?= $row['id_transaksi']; ?></td>
+                                        <td> <a href="detail/<?= $row['id_transaksi']; ?>"><?= $row['id_transaksi']; ?></a></td>
                                         <td><?= $row['paket']; ?></td>
                                         <td><?= $row['tgl_pp']; ?></td>
                                         <td><?= $row['tgl_selesai']; ?></td>

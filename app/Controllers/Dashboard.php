@@ -17,18 +17,12 @@ class Dashboard extends BaseController
         }
     }
 
-    public function edit($id)
+    public function edit()
     {
         $username = session()->get('username');
-
-        if($id == $username){
-            $model = new User_GoPromote();
-            $data['user'] = $model->getUser($username)->getRow();
-            echo view('edit', $data);
-        } else {
-            session()->destroy();
-            return redirect()->to('/')->deleteCookie('username');	
-        }
+        $model = new User_GoPromote();
+        $data['user'] = $model->getUser($username)->getRow();
+        echo view('edit', $data);
     }
 
     public function profile()

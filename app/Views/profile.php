@@ -26,7 +26,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-4 d-flex justify-content-center flex-column">
                     <div class="foto-profile" id="foto-profile">
-                        <?php if(is_null($user->foto)) : ?>
+                        <?php if (is_null($user->foto)) : ?>
                         <?php else :
                             $namaFoto = $user->foto;
                         ?>
@@ -36,15 +36,20 @@
                         <?php endif ?>
                     </div>
                     <?php if (session()->get('error')) : ?>
-                            <div class="manual-alert-foto wrng">
-                                <?= session()->get('error') ?>
-                            </div>
+                        <div class="manual-alert-foto wrng">
+                            <?= session()->get('error') ?>
+                        </div>
                     <?php endif; ?>
+                    <div class="kotak-foto">
                     <form action="Dashboard/foto" method="POST" enctype="multipart/form-data">
-                        <input type="file" name="foto-profile">
+                        <div class="label-center">
+                            <input id="foto" type="file" name="foto-profile" class="input-file">
+                            <label class="text-color-black input-button" for="foto"><i class="fas fa-upload"></i>Pilih Foto</label>
+                        </div>
+                        <div class="showname" id="showname"></div>
                         <input type="submit" value="ubah foto">
                     </form>
-                    
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <ul class="data">
@@ -82,8 +87,8 @@
                                     <tr>
                                         <td class="color-text-black"><?= $user->no_hp; ?></td>
                                     </tr>
-                                    <tr>
-                                        <td><button class="input" onclick="window.location.href='/edit/<?= session()->get('username'); ?>'">Edit</button></td>
+                                    <tr></tr>
+                                    <td><button class="input" onclick="window.location.href='/edit'">Edit</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -100,7 +105,21 @@
     <?php include 'footer.php' ?>
 
     <!-- Script -->
+    <script>
+        foto = document.getElementById('foto')
+        showName = document.getElementById('showname')
 
+        console.log("asdasd")
+        foto.addEventListener('change', function() {
+            var p = foto.value;
+            var filename = p.replace(/^.*[\\\/]/, '')
+            var extention;
+            extention = fileName.split('.').pop();
+            filename = filename.slice(0,8)+'...';
+            showName.innerHTML = filename + extention
+            showName.style.visibility='visible'
+        })
+    </script>
     <script type="text/javascript" src="../JS/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

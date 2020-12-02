@@ -32,7 +32,7 @@
                             <li class="nav-con"><a href="/sk">Syarat & ketentuan</a></li>
                         </div>
                         <div>
-                            <li class="nav-con"><a href="#">Biodata Pembuat</a></li>
+                            <li class="nav-con"><a href="#">Tips dan Trik</a></li>
                         </div>
                     </ul>
                 </div>

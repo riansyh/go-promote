@@ -371,6 +371,7 @@ body .rvw2 {
   margin-top: 220px;
   width: 800px;
   margin-bottom: 44px;
+  border-radius: 10px;
 }
 
 .cube-shadow{
@@ -417,14 +418,19 @@ body .rvw2 {
 }
 
 .beli-table,
-.bio {
+.bio, .detail {
   font-size: 17px;
   margin: 20px;
 }
 
 .beli-table tbody td,
-.bio tbody td {
+.bio tbody td,
+.detail tbody td {
   padding: 8px;
+}
+
+.detail tbody tr {
+  font-size: 20px;
 }
 
 .beli-table tbody tr:nth-of-type(odd),
@@ -539,4 +545,9 @@ li {
 
 .center{
   text-align: center;
+}
+
+.button-center {
+  margin: 50px auto 30px auto;
+  display: block;
 }

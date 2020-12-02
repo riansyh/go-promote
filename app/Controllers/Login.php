@@ -37,8 +37,9 @@ class Login extends BaseController
 
                 $this->setUserSession($user);
 
+                echo session()->get('level');
                 //cek admin atau bukan
-                if ($user['level'] === "2") {
+                if (session()->get('level') === "2") {
                     return redirect()->to("admin");
                 }
 
@@ -56,7 +57,7 @@ class Login extends BaseController
                     );
                     //Cek apakah sudah mengisi data atau belum
                     if ($data['user']->nama === "") {
-                        return redirect()->to("edit/$username")
+                        return redirect()->to("edit")
                             ->setCookie($cookie);
                     } else {
                         return redirect()->to("dashboard")
@@ -64,7 +65,7 @@ class Login extends BaseController
                     }
                    } else {
                     if ($data['user']->nama === "") {
-                        return redirect()->to("edit/$username");
+                        return redirect()->to("edit");
                     } else {
                         return redirect()->to("dashboard");
                     }

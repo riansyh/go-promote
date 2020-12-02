@@ -15,7 +15,7 @@ class TransaksiModel extends Model
         if ($id === false) {
             return $this->where('username', $user)->findAll();
         } else {
-            return $this->getWhere(['username' => $user]);
+            return $this->getWhere(['id_transaksi' => $id]);
         }
     }
 

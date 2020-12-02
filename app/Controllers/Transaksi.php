@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\JadwalModel;
 use App\Models\TransaksiModel;
+use App\Models\User_GoPromote;
 use CodeIgniter\I18n\Time;
 
 class Transaksi extends BaseController
@@ -12,15 +13,23 @@ class Transaksi extends BaseController
     public function index()
     {
         $model = new JadwalModel();
+        $model2 = new User_GoPromote();
+
+        $data['users'] = $model2->getAll();
         $data['transaksi'] = $model->getJadwal();
         return view('dashboard', $data);
     }
 
     public function admin()
     {
+        if(session()->get('level') === "2"){
         $model = new JadwalModel();
         $data['transaksi'] = $model->getAll();
         return view('admin', $data);
+        }
+        else{
+            return redirect()->to('dashboard');
+        }
     }
 
     public function update($id)
@@ -102,4 +111,14 @@ class Transaksi extends BaseController
         $model->deleteJadwal($id);
         return redirect()->to("/admin");
     }
+
+    public function detail($id)
+    {
+        $transaksi = new TransaksiModel();
+        $user = new User_GoPromote();
+
+        $data['transaksi'] = $transaksi->getTransaksi($id)->getRow();
+        $data['user'] = $user->getUser($data['transaksi']->username)->getRow();
+        echo view('detail', $data);
+    }    
 }

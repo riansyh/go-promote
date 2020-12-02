@@ -18,6 +18,11 @@ class User_GoPromote extends Model
         }
     }
 
+    public function getAll()
+    {
+        return $this->findAll();
+    }    
+
     public function saveUser($data)
     {
         $query = $this->db->table($this->table)->insert($data);

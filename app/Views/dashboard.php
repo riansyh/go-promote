@@ -22,33 +22,34 @@
             <div class="register2">
                 <div class="cube-group frame-color cube-shadow">
                     <li class="bukti">
-                        <h5 class="riwayat-pembelian color-text-black">Riwayat Pembelian</h5>
-                        <table class="jadwall">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Id Payment</th>
-                                    <th>Paket</th>
-                                    <th>Tanggal Mulai</th>
-                                    <th>Tanggal Selesai</th>
-                                    <th>Keterangan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1; ?>
-                                <?php foreach ($transaksi as $row) : ?>
-                                    <tr class="color-text-black">
-                                        <td><?= $no; ?></td>
-                                        <td><?= $row['id_transaksi']; ?></td>
-                                        <td><?= $row['paket']; ?></td>
-                                        <td><?= $row['tgl_pp']; ?></td>
-                                        <td><?= $row['tgl_selesai']; ?></td>
-                                        <td><?= $row['status']; ?></td>
+                        <?php if (session()->get('level') === 1) : ?>
+                            <h5 class="riwayat-pembelian color-text-black">Riwayat Pembelian</h5>
+                            <table class="jadwall">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Id Payment</th>
+                                        <th>Paket</th>
+                                        <th>Tanggal Mulai</th>
+                                        <th>Tanggal Selesai</th>
+                                        <th>Keterangan</th>
                                     </tr>
-                                    <?php $no++ ?>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <?php $no = 1; ?>
+                                    <?php foreach ($transaksi as $row) : ?>
+                                        <tr class="color-text-black">
+                                            <td><?= $no; ?></td>
+                                            <td><?= $row['id_transaksi']; ?></td>
+                                            <td><?= $row['paket']; ?></td>
+                                            <td><?= $row['tgl_pp']; ?></td>
+                                            <td><?= $row['tgl_selesai']; ?></td>
+                                            <td><?= $row['status']; ?></td>
+                                        </tr>
+                                        <?php $no++ ?>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
                     </li>
                     <li class="belilagi">
                         <div class="bl">
@@ -57,7 +58,32 @@
                             </a>
                         </div>
                     </li>
-                    </ul>
+                <?php else :  ?>
+                    <h5 class="riwayat-pembelian color-text-black">Daftar User</h5>
+                    <table class="jadwall">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Username</th>
+                                <th>Nama</th>
+                                <th>Jumlah Pemesanan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1; ?>
+                            <?php foreach ($users as $row) : ?>
+                                <tr class="color-text-black">
+                                    <td><?= $no; ?></td>
+                                    <td><?= $row['username']; ?></td>
+                                    <td><?= $row['nama']; ?></td>
+                                    <td></td>
+                                </tr>
+                                <?php $no++ ?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    </li>
+                <?php endif ?> </ul>
                 </div>
             </div>
         </div>
