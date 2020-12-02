@@ -26,7 +26,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-4 d-flex justify-content-center flex-column">
                     <div class="foto-profile" id="foto-profile">
-                        <?php if ($user->foto === " ") : ?>
+                        <?php if(is_null($user->foto)) : ?>
                         <?php else :
                             $namaFoto = $user->foto;
                         ?>

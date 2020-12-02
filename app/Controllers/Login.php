@@ -37,18 +37,14 @@ class Login extends BaseController
 
                 $this->setUserSession($user);
 
+                //cek admin atau bukan
+                if ($user['level'] === "2") {
+                    return redirect()->to("admin");
+                }
+
                 $modeluser = new User_GoPromote();
                 $username = session()->get('username');
                 $data['user'] = $modeluser->getUser($username)->getRow();
-
-                //cek admin atau bukan
-                if ($user['level'] === "2") {
-                    $data = [
-                        'level' => 2,
-                    ];
-                    session()->set($data);
-                    return redirect()->to("admin");
-                }
                 
                 //Cookie
                 $remember = $this->request->getVar('remember');
@@ -58,6 +54,7 @@ class Login extends BaseController
                         'value' => $this->request->getVar('username'),
                         'expire' => '36000',
                     );
+                    //Cek apakah sudah mengisi data atau belum
                     if ($data['user']->nama === "") {
                         return redirect()->to("edit/$username")
                             ->setCookie($cookie);
@@ -81,6 +78,7 @@ class Login extends BaseController
 	{
         $data = [
             'username' => $user['username'],
+            'level' => $user['level'],
             'isLoggedIn' => true,
         ];
         session()->set($data);
