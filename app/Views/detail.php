@@ -24,7 +24,7 @@
         <div class="register2">
             <div class="cube-group row frame-color cube-shadow tinggi-min">
                 <div class="col-md-12">
-                    <h1>Detail Transaksi</h1>
+                    <h1 class="color-text-black">Detail Transaksi</h1>
                     <p class="center">ID: <?= $transaksi->id_transaksi; ?></p>
                 </div>
                 <div class="col-md-12">
@@ -34,7 +34,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="color-text-black">Username Akun</td>
-                                        <td class="color-textblack">: <?= $transaksi->username; ?></td>
+                                        <td class="color-text-black">: <?= $transaksi->username; ?></td>
                                     </tr>
                                     <tr>
                                         <td class="color-text-black">Email</td>
@@ -42,19 +42,19 @@
                                     </tr>
                                     <tr>
                                         <td class="color-text-black">Nomor HP</td>
-                                        <td>: <?= $user->no_hp; ?></td>
+                                        <td class="color-text-black">: <?= $user->no_hp; ?></td>
                                     </tr>
                                     <tr>
                                         <td class="color-text-black">Instagram</td>
-                                        <td>: <?= $user->instagram; ?></td>
+                                        <td class="color-text-black">: <?= $user->instagram; ?></td>
                                     </tr>
                                     <tr>
                                         <td class="color-text-black">Tanggal Transaksi</td>
-                                        <td>: <?= $transaksi->tgl_transaksi; ?></td>
+                                        <td class="color-text-black">: <?= $transaksi->tgl_transaksi; ?></td>
                                     </tr>
                                     <tr>
                                         <td class="color-text-black">Metode Pembayaran</td>
-                                        <td>: <?= $transaksi->metode; ?></td>
+                                        <td class="color-text-black">: <?= $transaksi->metode; ?></td>
                                     </tr>
                                 </tbody>
                             </table>

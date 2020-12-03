@@ -20,8 +20,8 @@
     <main>
         <div class="container">
             <div class="register2">
-                <div class="cube-group frame-color">
-                    <li class="bukti">
+                <div class="cube-group-admin frame-color cube-shadow">
+                    <li class="jadwal-promosi">
                         <h5 class="riwayat-pembelian color-text-black">Daftar Jadwal Promosi</h5>
                         <table class="jadwall">
                             <thead>
@@ -46,8 +46,8 @@
                                         <td><?= $row['tgl_pp']; ?></td>
                                         <td><?= $row['tgl_selesai']; ?></td>
                                         <td><?= $row['status']; ?></td>
-                                        <td><a href="transaksi/update/<?= $row['id_transaksi']; ?>">Selesai</a></td>
-                                        <td><a href="transaksi/delete/<?= $row['id_transaksi']; ?>">Hapus</a></td>
+                                        <td><a href="transaksi/update/<?= $row['id_transaksi']; ?>" class="text-green">Selesai</a></td>
+                                        <td><a href="transaksi/delete/<?= $row['id_transaksi']; ?>" class="text-red">Hapus</a></td>
                                     </tr>
                                     <?php $no++ ?>
                                 <?php endforeach; ?>

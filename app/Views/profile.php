@@ -46,7 +46,7 @@
                             <input id="foto" type="file" name="foto-profile" class="input-file">
                             <label class="text-color-black input-button" for="foto"><i class="fas fa-upload"></i>Pilih Foto</label>
                         </div>
-                        <div class="showname" id="showname"></div>
+                        <div class="showname color-text-black" id="showname"></div>
                         <input type="submit" value="ubah foto">
                     </form>
                     </div>

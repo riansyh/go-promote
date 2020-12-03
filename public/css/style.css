@@ -366,6 +366,14 @@ body .rvw2 {
   min-height: 500px
 }
 
+.cube-group-admin{
+  position: relative;
+  margin-top: 220px;
+  width: 950px;
+  margin-bottom: 44px;
+  border-radius: 10px;
+}
+
 .cube-group {
   position: relative;
   margin-top: 220px;
@@ -398,7 +406,11 @@ body .rvw2 {
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
 }
 
-.bukti table {
+.jadwal-promosi{
+  padding: 0 30px;
+}
+
+.jadwal-promosi table {
   margin: 40px auto;
 }
 
@@ -446,11 +458,19 @@ a:hover {
   font-weight: bold;
 }
 
+.text-green{
+  color: #59b259;
+}
+
+.text-red{
+  color: #dc3545;
+}
+
 .jadwall {
   border-collapse: collapse;
   border-radius: 5px 5px 0 0;
-
-  margin-top: 80px;
+  margin: auto;
+  margin-top: 20px;
   margin-bottom: 50px;
   font-size: 1em;
   min-width: 400px;
