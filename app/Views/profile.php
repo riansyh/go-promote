@@ -47,7 +47,7 @@
                             <label class="text-color-black input-button" for="foto"><i class="fas fa-upload"></i>Pilih Foto</label>
                         </div>
                         <div class="showname color-text-black" id="showname"></div>
-                        <input type="submit" value="ubah foto">
+                        <input type="submit" value="ubah foto" id="ubah" disabled>
                     </form>
                     </div>
                 </div>
@@ -106,6 +106,7 @@
 
     <!-- Script -->
     <script>
+        ubahFoto = document.getElementById('ubah')
         foto = document.getElementById('foto')
         showName = document.getElementById('showname')
 
@@ -117,6 +118,7 @@
             filename = filename.slice(0,12)+'...'
             showName.innerHTML = filename+extension
             showName.style.visibility='visible'
+            ubahFoto.disabled = false;
         })
     </script>
     <script type="text/javascript" src="../JS/main.js"></script>

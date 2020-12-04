@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->add('/', 'Home::index');
 $routes->add('register', 'Login::register');
 $routes->add('sk', 'Login::sk');
+$routes->add('tips', 'Login::tips');
 $routes->add('login', 'Login::login');
 $routes->add('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->add('bio', 'Login::bio', ['filter' => 'auth']);

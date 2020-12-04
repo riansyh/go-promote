@@ -7,7 +7,7 @@
                 <p><a href="/#produk">Product</a></p>
                 <p><a href="/#bottom">Contact</a></p>
                 <p><a href="/sk">Syarat & Ketentuan</a></p>
-                <p><a href="#">Biodata Pembuat</a></p>
+                <p><a href="/tips">Tips dan Trick</a></p>
             </div>
             <div class="col-md-4 kolom">
                 <h1 class="bot-h1">Contact</h1>

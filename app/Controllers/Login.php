@@ -143,6 +143,10 @@ class Login extends BaseController
         return view('sk');
     }
 
+    public function tips(){
+        return view('tips');
+    }
+
 	//--------------------------------------------------------------------
 
 }
