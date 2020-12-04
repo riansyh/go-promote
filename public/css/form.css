@@ -22,6 +22,16 @@ select, .input{
 
 }
 
+input[type=submit]:disabled{
+    background-color: #4fb3f1;
+    border: none;
+    color: #fed;
+    margin: 23px;
+    text-decoration: none;
+    width: 186px;
+    cursor: pointer;
+}
+
 input[type=submit], .input {
     background-color: #038ade;
     border: none;
@@ -32,7 +42,7 @@ input[type=submit], .input {
     cursor: pointer;
 }
 
-input[type=submit]:hover, .input:hover {
+input[type=submit]:hover:enabled, .input:hover {
     transform: scale(1.01);
     transition: 0.2s;
     background-color: rgb(37, 77, 236);
