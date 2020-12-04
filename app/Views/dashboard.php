@@ -76,7 +76,7 @@
                                     <td><?= $no; ?></td>
                                     <td><?= $row->username; ?></td>
                                     <td><?= $row->nama; ?></td>
-                                    <td><?= $row->jumlah; ?></td>
+                                    <td><p style="text-align: center;"><?= $row->jumlah; ?></p></td>
                                 </tr>
                                 <?php $no++ ?>
                             <?php endforeach; ?>

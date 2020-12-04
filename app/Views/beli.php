@@ -26,7 +26,7 @@
                 <ul class="data">
                     <li class="pembelian frame-color">
                         <form method="post" action="/Transaksi/beli" enctype="multipart/form-data">
-                        <h1 class="color-text-black">Beli Paket</h1>
+                            <h1 class="color-text-black">Beli Paket</h1>
                             <table class="beli-table">
                                 <tbody>
                                     <tr>
@@ -55,8 +55,13 @@
                                         <td class="color-text-black">Konten</td>
                                     </tr>
                                     <tr>
-                                        <td> <input type="file" name="konten" required> </td>
-
+                                        <td>
+                                            <div class="label-center">
+                                                <input id="foto" type="file" name="konten" class="input-file" required>
+                                                <label class="text-color-black input-button" for="foto"><i class="fas fa-upload"></i>Pilih Foto</label>
+                                            </div>
+                                            <div class="showname color-text-black" id="showname"></div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="color-text-black">Caption</td>
@@ -100,6 +105,22 @@
     <?php include 'footer.php' ?>
 
     <!-- Script -->
+    <script>
+        ubahFoto = document.getElementById('ubah')
+        foto = document.getElementById('foto')
+        showName = document.getElementById('showname')
+
+        foto.addEventListener('change', function() {
+            var p = foto.value;
+            var filename = p.replace(/^.*[\\\/]/, '')
+            console.log(filename)
+            extension = filename.split('.').pop()
+            filename = filename.slice(0, 12) + '...'
+            showName.innerHTML = filename + extension
+            showName.style.visibility = 'visible'
+            ubahFoto.disabled = false;
+        })
+    </script>
     <script type="text/javascript" src="../JS/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
