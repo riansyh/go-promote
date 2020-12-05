@@ -34,13 +34,14 @@
                                 document.getElementById("foto-profile").style.backgroundImage = "url('../img/<?= session()->get('username') ?>/<?= $namaFoto; ?>')";
                             </script>
                         <?php endif ?>
+                        <div class="edit-foto"><button onclick="visibleEdit()"><i class="fas fa-edit"></i></button></div>
                     </div>
                     <?php if (session()->get('error')) : ?>
                         <div class="manual-alert-foto wrng">
                             <?= session()->get('error') ?>
                         </div>
                     <?php endif; ?>
-                    <div class="kotak-foto">
+                    <div class="kotak-foto" id="kotak-foto">
                     <form action="Dashboard/foto" method="POST" enctype="multipart/form-data">
                         <div class="label-center">
                             <input id="foto" type="file" name="foto-profile" class="input-file">
@@ -106,6 +107,13 @@
 
     <!-- Script -->
     <script>
+        function visibleEdit(){
+            document.getElementById("kotak-foto").style.visibility = 'visible';
+            document.getElementById("kotak-foto").style.opacity = '1';
+        }
+
+
+
         ubahFoto = document.getElementById('ubah')
         foto = document.getElementById('foto')
         showName = document.getElementById('showname')

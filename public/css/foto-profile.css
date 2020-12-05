@@ -10,4 +10,36 @@
     margin-top: 20px;
     margin: 0 auto;
     background-image: url(../img/no-foto.png);
+    overflow: hidden;
+}
+
+.edit-foto{
+    margin: 200px auto 0;
+    /* margin-left: 55px;
+    margin-top: 200px; */
+    position: relative;
+    border-radius: 100%;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-foto button i{
+    margin-bottom: 60px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.edit-foto button, .edit-foto button:active{
+    background-color: #038ade;
+    width: 100px;
+    height: 100px;
+    background-color: none;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+}
+
+.foto-profile:hover .edit-foto{
+    margin: 150px auto 0;
 }

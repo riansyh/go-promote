@@ -23,13 +23,14 @@ select, .input{
 }
 
 input[type=submit]:disabled{
+    pointer-events: all !important;
+    cursor: not-allowed;
     background-color: #4fb3f1;
     border: none;
     color: #fed;
     margin: 23px;
     text-decoration: none;
     width: 186px;
-    cursor: pointer;
 }
 
 input[type=submit], .input {
@@ -99,9 +100,12 @@ input:focus, textarea:focus, select:focus{
 }
 
 .kotak-foto{
+    visibility: hidden;
+    opacity: 0;
     margin: 40px 0 0 0;
     display: flex;
     justify-content: center;
+    transition: .4s;
 }
 
 .showname{
