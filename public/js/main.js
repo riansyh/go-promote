@@ -41,3 +41,8 @@ let trans = () => {
     document.documentElement.classList.remove('transition')
     }, 1000)
 }
+
+function visibleEdit(){
+    document.getElementById("kotak-foto").style.visibility = 'visible';
+    document.getElementById("kotak-foto").style.opacity = '1';
+}

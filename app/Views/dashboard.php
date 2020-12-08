@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" media="all" rel="stylsheet" type="text/css">
     <script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
@@ -20,10 +20,24 @@
     <main>
         <div class="container">
             <div class="register2">
-                <div class="cube-group frame-color cube-shadow">
+                <div class="wellcome frame-color cube-shadow">
+                    <p class="color-text-black">Selamat Datang,
+                        <?php if (session()->get('level') == 2) : ?>
+                            Admin!
+                        <?php else : ?>
+                            <?= session()->get('username'); echo "!";?>
+                        <?php endif; ?>
+                    </p>
+                </div>
+                <div class="cube-group margin-dashboard frame-color cube-shadow">
                     <li class="bukti">
                         <?php if (session()->get('level') === "1") : ?>
                             <h5 class="riwayat-pembelian color-text-black">Riwayat Pembelian</h5>
+                            <?php if (session()->get('succes')) : ?>
+                                <div class="manual-alert-foto succes">
+                                    <?= session()->get('succes') ?>
+                                </div>
+                            <?php endif; ?>
                             <table class="jadwall">
                                 <thead>
                                     <tr>
@@ -51,8 +65,8 @@
                                 </tbody>
                             </table>
                     </li>
-                    <li class="belilagi">
-                        <div class="bl">
+                    <li class="beli-paket">
+                        <div class="beli-paket-in">
                             <a href="beli">
                                 <h5>Beli Paket</h5>
                             </a>
@@ -76,7 +90,9 @@
                                     <td><?= $no; ?></td>
                                     <td><?= $row->username; ?></td>
                                     <td><?= $row->nama; ?></td>
-                                    <td><p style="text-align: center;"><?= $row->jumlah; ?></p></td>
+                                    <td>
+                                        <p style="text-align: center;"><?= $row->jumlah; ?></p>
+                                    </td>
                                 </tr>
                                 <?php $no++ ?>
                             <?php endforeach; ?>

@@ -68,53 +68,6 @@ body {
   font-weight: bolder;
   line-height: 1.3em;
 }
-/* 
-.jmbtrn .text .mtp {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 17px;
-  display: inline-block;
-}
-
-.jmbtrn .text .metode li {
-  display: inline-block;
-  font-size: 13px;
-}
-
-.jmbtrn .text .metode .ovo div {
-  background-image: url(../img/ovo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 10px;
-  margin-right: -20px;
-  height: 30px;
-  width: 50px;
-}
-
-.jmbtrn .text .metode .gopay div {
-  background-image: url(../img/gopay.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 30px;
-  width: 100px;
-}
-
-.jmbtrn .text .metode .dana div {
-  background-image: url(../img/dana.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  height: 30px;
-  width: 100px;
-}
-
-.jmbtrn .text .metode .link div {
-  background-image: url(../img/linkaja.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 30px;
-  width: 50px;
-} */
 
 .jmbtrn .foto-ppm {
   height: 350px;
@@ -350,11 +303,10 @@ body .rvw2 {
 .register2 {
   z-index: 100;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   margin: auto;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
   min-height: 700px;
 }
 
@@ -380,6 +332,19 @@ body .rvw2 {
   width: 800px;
   margin-bottom: 44px;
   border-radius: 10px;
+}
+
+.margin-dashboard{
+  margin: 50px 0 40px;
+}
+
+.wellcome{
+  align-self: flex-start;
+  margin: 180px 0 0 150px;
+  border-radius: 10px;
+  position: relative;
+  font-size: 18px;
+  padding: 13px 20px;
 }
 
 .cube-shadow{
@@ -498,9 +463,9 @@ a:hover {
   border-bottom: 2px solid #3b94ed;
 }
 
-.belilagi .bl {
+.beli-paket .beli-paket-in {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   background-color: #3b94ed;
   padding: 10px 30px;
   border-radius: 30px;
@@ -508,7 +473,7 @@ a:hover {
   text-align: center;
 }
 
-.belilagi h5 {
+.beli-paket h5 {
   color: white;
   margin-top: 0;
 }
@@ -522,7 +487,8 @@ a:hover {
   line-height: 20px;
 }
 
-.p1 {
+.p1,
+.tp {
   text-indent: 50px;
 }
 h1 {
@@ -532,7 +498,8 @@ h1 {
 }
 .syarat,
 .ketentuan,
-.paket {
+.paket,
+.headtp {
   font-size: 17px;
   font-weight: bold;
 }

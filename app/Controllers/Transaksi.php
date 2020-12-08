@@ -36,6 +36,7 @@ class Transaksi extends BaseController
         helper(['form']);
         $session = session();
         $username = session()->get('username');
+        $errorCheck = false;
 
         $namaFile = $_FILES["konten"]["name"];
         $sizeFile = $_FILES["konten"]["size"];
@@ -46,19 +47,19 @@ class Transaksi extends BaseController
         $extensiFile = explode('.', $namaFile);
         $extensiFile = strtolower(end($extensiFile));
 
-        if ($error === 4) {
+        if($error === 4){
             $session->setFlashdata('error', 'Tidak ada foto yang diupload!');
-            return redirect()->to('/profile');
-        } else {
-            if (!in_array($extensiFile, $extensiFileAllowed)) {
-                $session->setFlashdata('error', 'Extensi File Salah!');
-                return redirect()->to('/profile');
-            } else {
-                if ($sizeFile > 2000000) {
-                    $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
-                    return redirect()->to('/profile');
-                }
-            }
+            $errorCheck = true;
+        } else if(!in_array($extensiFile, $extensiFileAllowed)){            
+            $session->setFlashdata('error', 'Extensi File Salah!');
+            $errorCheck = true;
+        } else if($sizeFile > 2000000){
+            $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
+            $errorCheck = true;
+        }
+        
+        if ($errorCheck){
+            return redirect()->to('/profile');            
         }
 
         $namaFileBaru = uniqid();
@@ -89,7 +90,7 @@ class Transaksi extends BaseController
         ];
 
         $model->save($newData);
-
+        $session->setFlashdata('succes', 'Pembelian Berhasil!');
         return redirect()->to('/dashboard');
     }
 

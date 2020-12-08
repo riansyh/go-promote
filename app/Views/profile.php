@@ -107,13 +107,6 @@
 
     <!-- Script -->
     <script>
-        function visibleEdit(){
-            document.getElementById("kotak-foto").style.visibility = 'visible';
-            document.getElementById("kotak-foto").style.opacity = '1';
-        }
-
-
-
         ubahFoto = document.getElementById('ubah')
         foto = document.getElementById('foto')
         showName = document.getElementById('showname')

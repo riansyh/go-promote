@@ -13,9 +13,7 @@ class Login extends BaseController
         $data = [];
         helper(['form', 'cookie']);
 
-        if(session()->get('isLoggedIn')){
-            return redirect()->to('dashboard');
-        }
+        $this->cekLogin();
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
@@ -31,17 +29,13 @@ class Login extends BaseController
                 $data['validation'] = $this->validator;
             } else {
                 $model = new UserModel();
+                $direction = "";
 
                 $user = $model->where('username', $this->request->getVar('username'))
                 ->first();
 
                 $this->setUserSession($user);
-
-                echo session()->get('level');
-                //cek admin atau bukan
-                if (session()->get('level') === "2") {
-                    return redirect()->to("admin");
-                }
+                $this->cekAdmin();
 
                 $modeluser = new User_GoPromote();
                 $username = session()->get('username');
@@ -55,26 +49,37 @@ class Login extends BaseController
                         'value' => $this->request->getVar('username'),
                         'expire' => '36000',
                     );
-                    //Cek apakah sudah mengisi data atau belum
-                    if ($data['user']->nama === "") {
-                        return redirect()->to("edit")
-                            ->setCookie($cookie);
+                    $direction = $this->direction($data);
+                    return redirect()->to($direction)->setCookie($cookie);                    
                     } else {
-                        return redirect()->to("dashboard")
-                        ->setCookie($cookie);
-                    }
-                   } else {
-                    if ($data['user']->nama === "") {
-                        return redirect()->to("edit");
-                    } else {
-                        return redirect()->to("dashboard");
-                    }
+                    $direction = $this->direction($data);
+                    return redirect()->to($direction);
                 }
             }
         }
         return view('login', $data);
     }
     
+    private function direction($data){
+        if ($data['user']->nama === "") {
+            return "edit";
+        } else {
+            return "dashboard";
+        }        
+    }
+
+    public function cekAdmin(){
+        if (session()->get('level') === "2") {
+            return redirect()->to("admin");
+        }        
+    }    
+
+    private function cekLogin(){
+        if (session()->get('isLoggedIn')) {
+            return redirect()->to('dashboard');
+        }        
+    }
+
     private function setUserSession($user)
 	{
         $data = [

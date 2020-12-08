@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css" media="all" rel="stylsheet" type="text/css">
 	<script src="https://kit.fontawesome.com/a2c3b56892.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap">
@@ -22,7 +22,12 @@
 		<div class="tips frame-color cube-shadow color-text-black">
 			<h1> Tips Paid Promote Instagram yang Baik dan Profitable </h1><br>
 			<div class="p1 color-text-black">
-				<p>Paid promote atau ‘promosi berbayar’ adalah metode mempromosikan produk dengan memanfaatkan pihak ketiga yang memiliki banyak followers (audience).Dengan mempromosikan produk ke pihak ketiga dengan harapann banyak orang yang penasaran dan tertarik untuk membeli produk yang ditawarkan.Namun terkadang beberapa orang salah mengambil strategi dalam melakukan paid promote. Beberapa hal yang sering terjadi tingkat konversi kecil dan tidak balik modal sama sekali. Yang lebih parah, pertambahan followers sangat sedikit dan tidak berdampak sama sekali.Rugi beberapa kali mungkin tidak masalah, namun kalau berulang kali? Tentu harus dievaluasi, jangan-jangan strategi promosinya kurang tepat.Berikut beberapa strategi paid promote Instagram yang bisa Anda lakukan.</p>
+				<p>Paid promote atau ‘promosi berbayar’ adalah metode mempromosikan produk dengan memanfaatkan pihak ketiga yang memiliki 
+					banyak followers (audience).Dengan mempromosikan produk ke pihak ketiga dengan harapann banyak orang yang penasaran 
+					dan tertarik untuk membeli produk yang ditawarkan.Namun terkadang beberapa orang salah mengambil strategi dalam melakukan paid promote. 
+					Beberapa hal yang sering terjadi tingkat konversi kecil dan tidak balik modal sama sekali. Yang lebih parah, 
+					pertambahan followers sangat sedikit dan tidak berdampak sama sekali.Rugi beberapa kali mungkin tidak masalah, namun kalau berulang kali? 
+					Tentu harus dievaluasi, jangan-jangan strategi promosinya kurang tepat.Berikut beberapa strategi paid promote Instagram yang bisa Anda lakukan.</p>
 			</div><br><br>
 
 				<div class="headtp color-text-black">

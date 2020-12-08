@@ -2,8 +2,7 @@
 use App\Models\User_GoPromote;
 use App\Models\JadwalModel;
 class Dashboard extends BaseController
-{
-	
+{    
     public function index()
     {
         $model = new JadwalModel();
@@ -44,6 +43,7 @@ class Dashboard extends BaseController
         $sizeFile = $_FILES["foto-profile"]["size"];
         $error = $_FILES["foto-profile"]["error"];
         $tmpName = $_FILES["foto-profile"]["tmp_name"];
+        $errorCheck = false;
 
         $extensiFileAllowed = ["jpg", "jpeg", "png"];
         $extensiFile = explode('.', $namaFile);
@@ -51,18 +51,17 @@ class Dashboard extends BaseController
         
         if($error === 4){
             $session->setFlashdata('error', 'Tidak ada foto yang diupload!');
-            return redirect()->to('/profile');
-        }else{
-            if(!in_array($extensiFile, $extensiFileAllowed)){            
-                $session->setFlashdata('error', 'Extensi File Salah!');
-                return redirect()->to('/profile');
-            }
-            else{
-                if($sizeFile > 2000000){
-                    $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
-                    return redirect()->to('/profile');
-                }
-            }
+            $errorCheck = true;
+        } else if(!in_array($extensiFile, $extensiFileAllowed)){            
+            $session->setFlashdata('error', 'Extensi File Salah!');
+            $errorCheck = true;
+        } else if($sizeFile > 2000000){
+            $session->setFlashdata('error', 'File yang diupload lebih dari 2mb!');
+            $errorCheck = true;
+        }
+        
+        if ($errorCheck){
+            return redirect()->to('/profile');            
         }
 
         $namaFileBaru = uniqid();
@@ -81,7 +80,7 @@ class Dashboard extends BaseController
         $username = session()->get('username');
         $data = $namaFileBaru;
         $model->saveGambar($data, $username);
-        return redirect()->to('/profile');
+        return redirect()->to($this->profile);
     }
 
     public function update()
@@ -95,7 +94,7 @@ class Dashboard extends BaseController
             'instagram' => $this->request->getPost('instagram'),
         );
         $model->updateUser($data, $username);
-        return redirect()->to('/profile');
+        return redirect()->to($this->profile);
     }
 
     public function beliPage(){
