@@ -107,7 +107,7 @@ class Transaksi extends BaseController
         $user = new User_GoPromote();
 
         $data['transaksi'] = $transaksi->getTransaksi($id)->getRow();
-        $data['user'] = $user->getUser($data['transaksi']->username)->getRow();
+        $data['user'] = $user->getDetailPembeli($data['transaksi']->username)->getRow();
         echo view('detail', $data);
     }
 }

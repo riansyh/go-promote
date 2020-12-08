@@ -25,7 +25,7 @@
             <div class="cube-group row frame-color cube-shadow tinggi-min">
                 <div class="col-md-12">
                     <h1 class="color-text-black">Detail Transaksi</h1>
-                    <p class="center">ID: <?= $transaksi->id_transaksi; ?></p>
+                    <p class="center color-text-black">ID: <?= $transaksi->id_transaksi; ?></p>
                 </div>
                 <div class="col-md-12">
                     <ul class="data">

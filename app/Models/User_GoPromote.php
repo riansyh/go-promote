@@ -18,6 +18,11 @@ class User_GoPromote extends Model
         }
     }
 
+    public function getDetailPembeli($id = false)
+    {
+        return $this->getWhere(['username' => $id]);
+    }
+
     public function getAll()
     {
         $query = $this->db->query("SELECT b.username, a.nama, COUNT(b.username) as 'jumlah' FROM transaksi b JOIN users_data a ON b.username = a.username GROUP BY username");

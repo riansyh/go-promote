@@ -46,8 +46,8 @@
                                         <td><?= $row['tgl_pp']; ?></td>
                                         <td><?= $row['tgl_selesai']; ?></td>
                                         <td><?= $row['status']; ?></td>
-                                        <td><a href="transaksi/update/<?= $row['id_transaksi']; ?>" class="text-green">Selesai</a></td>
-                                        <td><a href="transaksi/delete/<?= $row['id_transaksi']; ?>" class="text-red">Hapus</a></td>
+                                        <td><a href="Transaksi/update/<?= $row['id_transaksi']; ?>" class="text-green">Selesai</a></td>
+                                        <td><a href="Transaksi/delete/<?= $row['id_transaksi']; ?>" class="text-red">Hapus</a></td>
                                     </tr>
                                     <?php $no++ ?>
                                 <?php endforeach; ?>
