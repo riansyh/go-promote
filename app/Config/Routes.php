@@ -37,15 +37,12 @@ $routes->add('sk', 'Login::sk');
 $routes->add('tips', 'Login::tips');
 $routes->add('login', 'Login::login');
 $routes->add('dashboard', 'Dashboard::index', ['filter' => 'auth']);
-$routes->add('bio', 'Login::bio', ['filter' => 'auth']);
 $routes->add('edit', 'Dashboard::edit', ['filter' => 'auth']);
 $routes->add('profile', 'Dashboard::profile', ['filter' => 'auth']);
 $routes->add('beli', 'Dashboard::beliPage', ['filter' => 'auth']);
 $routes->add('admin', 'Transaksi::admin', ['filter' => 'auth']);
 $routes->add('detail/(:alphanum)', 'Transaksi::detail/$1', ['filter' => 'auth']);
 /**
- * There will often be times that you need additional routing and you
- * need it to be able to override any defaults in this file. Environment
  * based routes is one such time. require() additional route files here
  * to make that happen.
  *

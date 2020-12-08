@@ -14,7 +14,7 @@ class Login extends BaseController
         helper(['form', 'cookie']);
 
         if (session()->get('isLoggedIn')) {
-            return redirect()->route('dashboard');
+            return redirect()->to('dashboard');
         }    
 
         if ($this->request->getMethod() == 'post') {
@@ -36,8 +36,7 @@ class Login extends BaseController
                 $user = $model->where('username', $this->request->getVar('username'))
                 ->first();
 
-                $this->setUserSession($user);
-                
+                $this->setUserSession($user);                
                 if (session()->get('level') === "2") {
                     return redirect()->to("admin");
                 }  
@@ -131,10 +130,6 @@ class Login extends BaseController
 	{
         session()->destroy();
         return redirect()->to('/')->deleteCookie('username');		
-    }
-    
-    public function bio(){
-        return view('bio_pembuat');
     }
 
     public function sk(){
