@@ -1,4 +1,5 @@
-<?php namespace App\Controllers;
+<?php 
+namespace App\Controllers;
 use App\Models\User_GoPromote;
 use App\Models\JadwalModel;
 class Dashboard extends BaseController
@@ -29,8 +30,7 @@ class Dashboard extends BaseController
         echo view('edit', $data);
     }
 
-    public function profile()
-    {
+    public function profile(){
         $username = session()->get('username');
             $model = new User_GoPromote();
             $data['user'] = $model->getUser($username)->getRow();
@@ -70,17 +70,17 @@ class Dashboard extends BaseController
 
         $session = session()->get('username');
 
-        $dir = "img/$session";
+        $dir = "foto-profile/$session";
         if(!is_dir($dir)){
-            mkdir("img/" . session()->get('username'));
+            mkdir("foto-profile/" . session()->get('username'));
         }
-        move_uploaded_file($tmpName, 'img/' . session()->get('username') . '/' . $namaFileBaru);
+        move_uploaded_file($tmpName, 'foto-profile/' . session()->get('username') . '/' . $namaFileBaru);
 
         $model = new User_GoPromote();
         $username = session()->get('username');
         $data = $namaFileBaru;
         $model->saveGambar($data, $username);
-        return redirect()->to($this->profile);
+        return redirect()->to('/profile');   
     }
 
     public function update()
@@ -94,7 +94,7 @@ class Dashboard extends BaseController
             'instagram' => $this->request->getPost('instagram'),
         );
         $model->updateUser($data, $username);
-        return redirect()->to($this->profile);
+        return redirect()->to('/profile');
     }
 
     public function beliPage(){

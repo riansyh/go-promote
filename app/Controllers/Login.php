@@ -13,7 +13,9 @@ class Login extends BaseController
         $data = [];
         helper(['form', 'cookie']);
 
-        $this->cekLogin();
+        if (session()->get('isLoggedIn')) {
+            return redirect()->route('dashboard');
+        }    
 
         if ($this->request->getMethod() == 'post') {
             $rules = [
@@ -35,7 +37,10 @@ class Login extends BaseController
                 ->first();
 
                 $this->setUserSession($user);
-                $this->cekAdmin();
+                
+                if (session()->get('level') === "2") {
+                    return redirect()->to("admin");
+                }  
 
                 $modeluser = new User_GoPromote();
                 $username = session()->get('username');
@@ -66,19 +71,7 @@ class Login extends BaseController
         } else {
             return "dashboard";
         }        
-    }
-
-    public function cekAdmin(){
-        if (session()->get('level') === "2") {
-            return redirect()->to("admin");
-        }        
-    }    
-
-    private function cekLogin(){
-        if (session()->get('isLoggedIn')) {
-            return redirect()->to('dashboard');
-        }        
-    }
+    } 
 
     private function setUserSession($user)
 	{

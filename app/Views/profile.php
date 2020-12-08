@@ -31,7 +31,7 @@
                             $namaFoto = $user->foto;
                         ?>
                             <script>
-                                document.getElementById("foto-profile").style.backgroundImage = "url('../img/<?= session()->get('username') ?>/<?= $namaFoto; ?>')";
+                                document.getElementById("foto-profile").style.backgroundImage = "url('../foto-profile/<?= session()->get('username') ?>/<?= $namaFoto; ?>')";
                             </script>
                         <?php endif ?>
                         <div class="edit-foto"><button onclick="visibleEdit()"><i class="fas fa-edit"></i></button></div>
